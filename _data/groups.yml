@@ -1,0 +1,21 @@
+# Order used on Research and Projects.
+- id: dexterous
+  title: Dexterous manipulation and grasping
+  summary: >-
+    Current work at UT Dallas on grasp representations, large-scale grasp
+    data, and a policy that transfers across hands.
+- id: tools
+  title: Robotics infrastructure and tools
+  summary: >-
+    Isaac Sim and ROS packages released with the lab for grasp evaluation,
+    the LEAP Hand, and a force-torque sensor on Fetch.
+- id: hardware
+  title: Hardware
+  summary: >-
+    A published open-source humanoid hand, and an industry collaboration
+    that still needs a public description.
+- id: earlier
+  title: Earlier work
+  summary: >-
+    Master's and bachelor's research, the Hexafarms internship, teaching
+    labs, and earlier mechatronics projects.

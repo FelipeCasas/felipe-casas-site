@@ -1,0 +1,73 @@
+# Professional roles, newest first. Persona AI bullets and dates are placeholders.
+- id: persona-ai
+  role: Reinforcement Learning Engineer
+  kind: Summer internship
+  org: Persona AI
+  dates_todo: >-
+    Add the start and end dates. A public post on August 25, 2026 thanks
+    @personaaiinc for a summer internship. The post does not give dates.
+  location_todo: Add the location if it should be public.
+  bullets_todo: >-
+    Add public bullets for the summer 2026 internship. Confirm what can be
+    shared.
+  links:
+    - label: Note on X
+      url: https://x.com/lfcasas7/status/2092338679196917789
+- id: phd-researcher
+  role: Ph.D. researcher
+  org: Intelligent Robots and Vision Lab, UT Dallas
+  org_url: https://labs.utdallas.edu/irvl/
+  location: Richardson, TX
+  dates_todo: >-
+    Same start-date choice as education. The CV says Aug. 2023–present.
+    The previous site says Sep. 2023–ongoing.
+  bullets:
+    - Research on dexterous manipulation, robotic control policies, grasping, generative models, cross-embodiment learning, and zero-shot transfer.
+    - "First author of UHAS, presented at the RSS 2026 Dexterous Manipulation Workshop."
+    - "Co-author of RobotFingerPrint (IROS 2025) and co-first author of MultiGripperGrasp (IROS 2024)."
+    - Design, upgrade, and maintain manipulation platforms, including cameras, force-torque sensors, and IMUs.
+    - Benchmark grasping and manipulation policies in simulation and on hardware, using MuJoCo, Gazebo, Isaac Sim, and ROS / ROS 2.
+    - Industry collaboration on novel robot hardware design for Frontier Mining.
+- id: lecturer
+  role: University lecturer and lab instructor
+  org: UNITEC
+  org_url: https://www.unitec.edu/
+  location: Tegucigalpa, Honduras
+  dates: April 2023 – June 2023
+  bullets:
+    - Designed and taught the Programmable Logic Controllers course and the Industrial Networks course for senior mechatronics students.
+    - Labs covered control, linear systems, stability, controller design, task planning, and motor control.
+    - "Hands-on labs used Siemens and Schneider hardware, from programming through commissioning."
+- id: hexafarms
+  role: AI Researcher Intern
+  org: Hexafarms GmbH
+  org_url: https://www.hexafarms.com
+  location: Saarbrücken, Germany
+  dates: November 2021 – March 2022
+  note: The previous site lists this role as “AI Researcher,” without “Intern.” The CV title is used here.
+  bullets:
+    - Built a 3D reconstruction pipeline for vertical farms from drone imagery with structure-from-motion.
+    - Segmented 3D models and wrote a labeling tool for training PointNet.
+    - Developed deep-learning models for yield prediction on edge devices.
+- id: ingelmec
+  role: Mechatronics engineer
+  org: Ingelmec
+  org_url: https://www.ingelmec.com
+  location: Tegucigalpa, Honduras
+  dates: Aug. 2018 – May 2019
+  note: The previous site ends this role in April 2019. The CV end date is used here.
+  bullets:
+    - Monitoring and Innovation department, and the fire-suppression systems team.
+    - Deployed data-center monitoring with SCADA, including on-site installation and network integration.
+    - Configured new equipment and wrote simplified, translated guides for technicians.
+    - Maintained fire-suppression systems, including functional tests, troubleshooting, and inspections.
+- id: unilab
+  role: Laboratory aide
+  org: UNILAB multipurpose laboratory, UNITEC
+  org_url: https://www.unitec.edu/
+  location: Tegucigalpa, Honduras
+  dates: Jul. 2015 – Oct. 2017
+  bullets:
+    - Supported the laboratory manager with equipment maintenance and repair, including the welding and machine-tools labs.
+    - Prepared solutions, calibrated instruments, and kept chemistry and ecology labs in safe working order.
+    - Instructed more than 200 students per trimester in lab safety and experimental procedure.

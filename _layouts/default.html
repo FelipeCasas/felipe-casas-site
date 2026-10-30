@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add("js");document.documentElement.classList.remove("no-js");</script>
+  {% assign seo_title = page.title %}
+  {% assign seo_desc = page.description | default: site.description %}
+  {% if page.collection == "projects" %}
+    {% assign seo_project = site.data.projects | where: "slug", page.slug | first %}
+    {% if seo_project %}
+      {% assign seo_title = seo_project.title %}
+      {% assign seo_desc = seo_project.summary %}
+    {% endif %}
+  {% endif %}
+  {% if page.url == "/" %}
+    {% assign full_title = site.title %}
+  {% elsif seo_title %}
+    {% capture full_title %}{{ seo_title }} · {{ site.title }}{% endcapture %}
+  {% else %}
+    {% assign full_title = site.title %}
+  {% endif %}
+  <title>{{ full_title }}</title>
+  <meta name="description" content="{{ seo_desc | strip_newlines | truncate: 220 }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ full_title }}">
+  <meta property="og:description" content="{{ seo_desc | strip_newlines | truncate: 220 }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#164e5b">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% assign person = site.data.profile %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ person.name | jsonify }},
+    "url": {{ "/" | absolute_url | jsonify }},
+    "jobTitle": "PhD candidate",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "The University of Texas at Dallas",
+      "url": "https://www.utdallas.edu/"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Intelligent Robots and Vision Lab",
+      "url": {{ person.lab_url | jsonify }}
+    },
+    "sameAs": [
+      {{ person.github | jsonify }},
+      {{ person.x | jsonify }},
+      {{ person.linkedin.url | jsonify }}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  {% include header.html %}
+  <main id="main" tabindex="-1">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/nav.js' | relative_url }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+languages:
+  - name: Spanish
+    level: Mother tongue
+  - name: English
+    level: Fluent (bilingual on the previous site)
+  - name: German
+    level: Basic proficiency on the CV
+    note: The previous site lists German at B1. The CV says basic proficiency.
+
+groups:
+  - title: Robotic manipulation, modeling, and control
+    items:
+      - Dexterous manipulation policies and robot grasping
+      - Cross-embodiment transfer and zero-shot transfer
+      - Reinforcement learning, imitation learning, and model predictive control
+      - Forward and inverse kinematics, torque control, and spatial vector arithmetic
+      - Stability, controller design, motion planning, perception, and task planning
+  - title: Machine learning
+    items:
+      - Generative models
+      - 3D reconstruction, photogrammetry, and image processing
+      - Deep learning and controls-oriented modeling
+  - title: Frameworks and tools
+    items:
+      - PyTorch, JAX, and TensorFlow/Keras
+      - Isaac Sim and Isaac Lab
+      - ROS and ROS 2
+      - MuJoCo, Gazebo, and Unity ML-Agents
+      - MATLAB, Simulink, and Git
+  - title: Hardware, software, and automation
+    items:
+      - Robot design, precision sensors, electronics, and embedded systems
+      - Wireless sensor networks, circuit design, and PCB layout
+      - "CAD/CAM: SolidWorks, CNC, and 3D printing"
+      - "PLC programming (ladder, function block) and industrial networks"
+      - SCADA, LabVIEW, Python, C++, C#, PHP, and SQL
+
+working_style:
+  - Extremely organized, proactive, and used to planning
+  - Comfortable explaining complex topics, and comfortable with public speaking
+  - Looks for feedback, and works in teams
+  - Self-learning and disciplined

@@ -1,0 +1,72 @@
+---
+layout: default
+title: Experience
+permalink: /experience/
+description: Research, industry, teaching, and volunteer roles.
+---
+<div class="wrap">
+  <header class="page-header">
+    <h1>Experience</h1>
+    <p class="lede">Research, industry, and teaching, then volunteer roles. The Persona AI internship is new and still needs dates and bullets.</p>
+  </header>
+
+  <section id="roles">
+    <h2>Roles</h2>
+    <div class="timeline">
+      {% for job in site.data.experience %}
+        <article id="{{ job.id }}">
+          <h3>{{ job.role }}{% if job.kind %} <span class="kicker">{{ job.kind }}</span>{% endif %}</h3>
+          <p>
+            {% if job.org_url %}<a href="{{ job.org_url }}">{{ job.org }}</a>{% else %}{{ job.org }}{% endif %}
+            {% if job.location %} · {{ job.location }}{% endif %}
+          </p>
+          {% if job.dates_todo %}
+            <p class="todo-block"><span class="todo-flag">TODO</span> {{ job.dates_todo }}</p>
+          {% elsif job.dates %}
+            <p>{{ job.dates }}</p>
+          {% endif %}
+          {% if job.location_todo %}
+            <p class="todo-block"><span class="todo-flag">TODO</span> {{ job.location_todo }}</p>
+          {% endif %}
+          {% if job.note %}<p class="source-note">{{ job.note }}</p>{% endif %}
+          {% if job.bullets_todo %}
+            <p class="todo-block"><span class="todo-flag">TODO</span> {{ job.bullets_todo }}</p>
+          {% endif %}
+          {% if job.bullets %}
+            <ul class="clean">
+              {% for bullet in job.bullets %}
+                <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if job.links %}
+            <ul class="link-row">
+              {% for link in job.links %}
+                <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="service">
+    <h2>Volunteering and service</h2>
+    <div class="timeline">
+      {% for job in site.data.service %}
+        <article>
+          <h3>{{ job.role }}</h3>
+          <p>{% if job.url %}<a href="{{ job.url }}">{{ job.org }}</a>{% else %}{{ job.org }}{% endif %}{% if job.location %} · {{ job.location }}{% endif %}</p>
+          <p>{{ job.dates }}</p>
+          {% if job.note %}<p class="source-note">{{ job.note }}</p>{% endif %}
+          <ul class="clean">
+            {% for bullet in job.bullets %}
+              <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,59 @@
+# Newest first. The home page shows the first five.
+- date: "2026-09-17"
+  display: September 17, 2026
+  title: UHAS live visualization
+  text: Dragging a driving plane moves the Allegro, LEAP, Shadow, MANO, and Wuji hands together.
+  url: https://x.com/lfcasas7/status/2100701072264184274
+  project: uhas
+- date: "2026-08-25"
+  display: August 25, 2026
+  title: Summer internship at Persona AI
+  text: Public thanks to the Persona AI team for a summer internship. The role on this site is Reinforcement Learning Engineer. Dates and a description are still to be added.
+  url: https://x.com/lfcasas7/status/2092338679196917789
+- date: "2026-08-17"
+  display: August 17, 2026
+  title: RoboPapers podcast, episode 97
+  text: Conversation with Chris Paxton and Jiafei Duan about UHAS. A direct episode URL is not in the source post.
+  url: https://x.com/lfcasas7/status/2089163054210580932
+  project: uhas
+  todo: Add the direct RoboPapers episode URL. The post used a short link that was not captured.
+- date: "2026-07-10"
+  display: July 10, 2026
+  title: UHAS released, and accepted at RSS 2026
+  text: "Cross-Embodiment Robot Manipulation via a Unified Hand Action Space was announced and presented at the RSS 2026 Dexterous Manipulation Workshop."
+  url: https://x.com/lfcasas7/status/2075670283575513462
+  project: uhas
+- date: "2026-04-04"
+  display: April 4, 2026
+  title: RobotFingerPrint poster at TEROS 2026
+  text: "Poster at Texas Robotics (TEROS 2026): Unified Gripper Coordinate Space for Multi-Gripper Grasp Synthesis and Transfer."
+  url: https://x.com/lfcasas7/status/2040495582792351877
+  project: robotfingerprint
+- date: "2026-02-14"
+  display: February 14, 2026
+  title: Louis Beecherl, Jr. Graduate Fellowship
+  text: Fellowship for 2025–2026 from the Erik Jonsson School at UT Dallas.
+  url: https://x.com/lfcasas7/status/2022513869076193385
+- date: "2025-05-08"
+  display: May 8, 2025
+  title: LEAP Hand ROS package
+  text: leap_inhand adds URDFs, sim-aligned control, and position, velocity, and effort services.
+  url: https://x.com/lfcasas7/status/1920606843937677429
+  project: leap-inhand
+- date: "2025-03-04"
+  display: March 4, 2025
+  title: fetch_netft ROS package
+  text: ATI force/torque readings published as WrenchStamped on the Fetch robot.
+  url: https://x.com/lfcasas7/status/1896969667153117603
+  project: fetch-netft
+- date: "2025-02-13"
+  display: February 13, 2025
+  title: MultiGripperGrasp Toolkit 2.0
+  text: Standalone Isaac Sim toolkit for evaluating grasps across grippers, objects, and controllers.
+  url: https://x.com/lfcasas7/status/1890099324115103745
+  project: multigrippergrasp-toolkit
+- date: "2023-05"
+  display: May 2023
+  title: Invited talk at UNITEC
+  text: "International Engineering Week. CV title: Artificial Intelligence Applied to Flexible Manufacturing Workshops."
+  project: digital-twin

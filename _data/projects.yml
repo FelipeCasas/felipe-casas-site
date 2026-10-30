@@ -1,0 +1,880 @@
+# One entry per project. To add a project:
+# 1. Copy an entry below and edit it.
+# 2. Add _projects/<slug>.md containing only:
+#      ---
+#      slug: your-slug
+#      ---
+# 3. Optional figures go in assets/images/opt/.
+# 4. Optional video: save assets/videos/<slug>.mp4 and set local_video to that path.
+# Paper, code, and video use status ok | todo | na.
+# todo renders as "Paper: coming soon" / "Code: coming soon".
+# The video row is always shown from local_video / video_path.
+
+- slug: uhas
+  title: "UHAS: Unified Hand Action Space"
+  summary: >-
+    One reinforcement-learning policy controls different dexterous hands
+    through deformations of a canonical sphere, mapped by Cascade Inverse
+    Kinematics.
+  kicker: RSS 2026
+  card_label: UHAS
+  featured: true
+  group: dexterous
+  date_display: "2026"
+  location: University of Texas at Dallas
+  project_type: Dexterous manipulation
+  publication: uhas
+  local_video: ""
+  video_path: assets/videos/uhas.mp4
+  role: >-
+    First author of the workshop paper and of the project release. I announced
+    the method, the RSS 2026 presentation, the Wuji Hand addition, and the
+    live visualization.
+  paragraphs:
+    - >-
+      Robot manipulation policies are typically tied to specific robotic hand
+      embodiments, limiting the transfer of learned behaviors across platforms
+      with different kinematic structures. UHAS is a sphere-based unified
+      action representation for cross-embodiment dexterous manipulation. It
+      represents hand actions as geometric deformations of a canonical sphere
+      and uses a Cascade Inverse Kinematics (CIK) algorithm to map that shared
+      representation to embodiment-specific joint configurations. Policies are
+      trained with reinforcement learning, directly in this action space, on
+      in-hand cube reorientation. The paper evaluates the method in simulation
+      and on hardware across the Allegro Hand, LEAP Hand, Shadow Hand, and
+      MANO human hand, including zero-shot transfer to unseen hands, rapid
+      finetuning, and real-world deployment.
+    - >-
+      The public thread adds a few concrete pieces around that result. The
+      policy outputs sphere deformations. Automatic URDF analysis builds the
+      canonical sphere and dense surface correspondences. Driving planes
+      (changes in angle) and driving vectors (changes in radius) are
+      interpolated, and the same deformation produces coordinated poses across
+      hands. Cascade IK runs at up to 150 Hz. Zero-shot cases in the thread
+      include a single hand, a joint failure, unseen hands, and a jump between
+      four-finger and five-finger morphology. Real-robot clips show in-hand
+      cube reorientation on a LEAP Hand and an Allegro Hand. The repository is
+      set up so another hand can be added by following the guides. On July 11,
+      2026 a Wuji Hand was added to the training set that way. On September 17,
+      2026 a live visualization let a driving plane be dragged so Allegro,
+      LEAP, Shadow, MANO, and Wuji moved together.
+    - >-
+      The paper was accepted and presented at the 4th Workshop on Dexterous
+      Manipulation at Robotics: Science and Systems (RSS), 2026.
+  links:
+    - label: Paper
+      status: ok
+      url: https://arxiv.org/abs/2607.03570
+    - label: Project page
+      status: ok
+      url: https://irvlutd.github.io/UHAS/
+    - label: Code
+      status: ok
+      url: https://github.com/IRVLUTD/UHAS_sim
+    - label: Workshop
+      status: ok
+      url: https://dex-manipulation.github.io/rss2026/
+  x_posts:
+    - url: https://x.com/lfcasas7/status/2075670283575513462
+      date: "2026-07-10"
+      embed: true
+      note: "Thread 1/9. Announcement video: one policy controlling several hands."
+    - url: https://x.com/lfcasas7/status/2075670287337558493
+      date: "2026-07-10"
+      embed: false
+      note: "Thread 2/9. The policy outputs sphere deformations, mapped with Cascade IK."
+    - url: https://x.com/lfcasas7/status/2075670293113356410
+      date: "2026-07-10"
+      embed: false
+      note: "Thread 3/9. Automatic URDF analysis, a canonical sphere, and dense surface correspondences."
+    - url: https://x.com/lfcasas7/status/2075670296976113792
+      date: "2026-07-10"
+      embed: false
+      note: "Thread 4/9. Driving planes and driving vectors, and interpolation."
+    - url: https://x.com/lfcasas7/status/2075670300260200830
+      date: "2026-07-10"
+      embed: true
+      note: "Thread 5/9. Video of Cascade Inverse Kinematics, up to 150 Hz."
+    - url: https://x.com/lfcasas7/status/2075670304542859555
+      date: "2026-07-10"
+      embed: false
+      note: "Thread 6/9. The same sphere deformation produces coordinated poses across hands."
+    - url: https://x.com/lfcasas7/status/2075670308585914734
+      date: "2026-07-10"
+      embed: true
+      note: "Thread 7/9. Video of zero-shot cases, including unseen hands and four-finger versus five-finger morphology."
+    - url: https://x.com/lfcasas7/status/2075670311521927363
+      date: "2026-07-10"
+      embed: true
+      note: "Thread 8/9. Video of real-world in-hand cube reorientation on a LEAP Hand and an Allegro Hand."
+    - url: https://x.com/lfcasas7/status/2075670314801893874
+      date: "2026-07-10"
+      embed: false
+      note: "Thread 9/9. Bring Your Own Hand, with the repository, project page, and author list."
+    - url: https://x.com/lfcasas7/status/2075674129638781313
+      date: "2026-07-10"
+      embed: false
+      note: "Invitation to the RSS 2026 Dexterous Manipulation Workshop, where the paper was presented."
+    - url: https://x.com/lfcasas7/status/2075980423562236173
+      date: "2026-07-11"
+      embed: true
+      note: "Video. A Wuji Hand added to the UHAS training set by following the repository guides."
+    - url: https://x.com/lfcasas7/status/2100701072264184274
+      date: "2026-09-17"
+      embed: true
+      note: "Video. Live visualization: drag a driving plane and Allegro, LEAP, Shadow, MANO, and Wuji move together."
+
+- slug: robotfingerprint
+  title: "RobotFingerPrint"
+  summary: >-
+    A shared spherical coordinate space and a conditional VAE for
+    multi-gripper grasp synthesis, including zero-shot transfer to unknown
+    hands.
+  kicker: IROS 2025
+  card_label: RFP
+  featured: true
+  group: dexterous
+  date_display: arXiv 2024 · IROS 2025
+  location: Dallas, TX
+  project_type: Robotic grasping
+  publication: robotfingerprint
+  local_video: ""
+  video_path: assets/videos/robotfingerprint.mp4
+  role: Co-author. I presented the poster at TEROS 2026.
+  paragraphs:
+    - >-
+      RobotFingerPrint introduces a representation called the unified gripper
+      coordinate space for grasp synthesis across multiple grippers. The space
+      is a 2D surface of a sphere in 3D, using longitude and latitude, and it
+      is shared by all of the grippers. An algorithm maps the palm surface of
+      a gripper into that space. A conditional variational autoencoder predicts
+      unified gripper coordinates for an input object. Those coordinates set
+      up correspondences between the gripper and the object, which an
+      optimization then turns into a grasp pose and finger joints. Using the
+      shared space improves success rate and diversity for grasp synthesis
+      across grippers.
+    - >-
+      The arXiv preprint is from 2024. The conference version, whose title
+      adds “and Transfer,” was published at IROS 2025. I presented a poster
+      at TEROS 2026 (Texas Robotics) on April 4, 2026.
+  links:
+    - label: Paper
+      status: ok
+      url: https://arxiv.org/abs/2409.14519
+    - label: Project page
+      status: ok
+      url: https://irvlutd.github.io/RobotFingerPrint/
+    - label: Code
+      status: ok
+      url: https://github.com/IRVLUTD/robot-finger-print
+  x_posts:
+    - url: https://x.com/lfcasas7/status/2040495582792351877
+      date: "2026-04-04"
+      embed: false
+      note: "TEROS 2026 poster. The post includes a photo of the poster."
+  card_image:
+    src: /assets/images/opt/rfp-teaser.jpg
+    width: 1179
+    height: 917
+  images:
+    - src: /assets/images/opt/rfp-teaser.jpg
+      width: 1179
+      height: 917
+      alt: "Figure comparing a contact map, sparse gripper keypoints, and RobotFingerPrint coordinate coloring on a duck and a hand. The RobotFingerPrint panel is marked as dense correspondence across grippers, including unseen grippers."
+    - src: /assets/images/opt/rfp-overview.jpg
+      width: 1600
+      height: 466
+      wide: true
+      alt: "Diagram of the RobotFingerPrint model, with gripper-point correspondence, grasp pose, and small hand renders."
+    - src: /assets/images/opt/rfp-coordinate-space.jpg
+      width: 1600
+      height: 613
+      wide: true
+      alt: "Unified gripper coordinate space drawn as colored spheres next to several robotic hands."
+    - src: /assets/images/opt/rfp-contact.jpg
+      width: 1211
+      height: 938
+      alt: "Grippers holding objects, with palms colored by the unified coordinate map."
+
+- slug: multigrippergrasp
+  title: MultiGripperGrasp
+  summary: >-
+    30.4 million Isaac Sim grasps for 11 grippers and 345 objects, with
+    palm alignment so grasps can transfer across grippers.
+  kicker: IROS 2024
+  card_label: MGG
+  featured: true
+  group: dexterous
+  date_display: March 2024 · IROS 2024
+  location: University of Texas at Dallas
+  project_type: Intelligent robotics, robotic grasping
+  publication: multigrippergrasp
+  local_video: ""
+  video_path: assets/videos/multigrippergrasp.mp4
+  role: Co-first author with Ninad Khargonkar (equal contribution).
+  paragraphs:
+    - >-
+      MultiGripperGrasp is a large-scale dataset for robotic grasping. It
+      contains 30.4 million grasps from 11 grippers for 345 objects. The
+      grippers run from two-finger grippers to five-finger grippers, including
+      a human hand. Every grasp is verified in Isaac Sim and labeled successful
+      or unsuccessful. The object fall-off time is stored as a grasp-quality
+      measurement. The grippers are aligned by palm orientation and position,
+      which makes it possible to transfer a grasp from one gripper to another.
+      That transfer increases the number of successful grasps for each gripper.
+      The dataset is meant for generalized grasp planning and for studying
+      grasp transfer.
+    - >-
+      The paper was presented at IROS 2024. A separate project page on this
+      site covers the February 2025 evaluation toolkit built on the same code
+      repository.
+  links:
+    - label: Paper
+      status: ok
+      url: https://arxiv.org/abs/2403.09841
+    - label: Project page
+      status: ok
+      url: https://irvlutd.github.io/MultiGripperGrasp/
+    - label: Code
+      status: ok
+      url: https://github.com/IRVLUTD/isaac_sim_grasping
+    - label: Dataset generation
+      status: ok
+      url: https://github.com/IRVLUTD/neuralgrasps-dataset-generation/tree/multigrippergrasp
+  card_image:
+    src: /assets/images/opt/mgg-embodiment-grid.jpg
+    width: 1163
+    height: 352
+  images:
+    - src: /assets/images/opt/mgg-embodiment-grid.jpg
+      width: 1163
+      height: 352
+      wide: true
+      alt: Grid of robotic grippers and hands used in MultiGripperGrasp.
+    - src: /assets/images/opt/mgg-grippers-grid.jpg
+      width: 863
+      height: 349
+      alt: Collection of rendered grippers and dexterous hands.
+    - src: /assets/images/opt/mgg-sim-grasps.jpg
+      width: 919
+      height: 347
+      alt: Simulation scene of many hands grasping objects on a flat surface.
+    - src: /assets/images/opt/mgg-spectrum.jpg
+      width: 1600
+      height: 409
+      wide: true
+      alt: Row of gripper renders labeled as a ranked gripper spectrum.
+    - src: /assets/images/opt/mgg-transfer.jpg
+      width: 1600
+      height: 325
+      wide: true
+      alt: Wide figure of the MultiGripperGrasp transfer setup, with rows of grippers and hands.
+
+- slug: multigrippergrasp-toolkit
+  title: MultiGripperGrasp Toolkit 2.0
+  summary: >-
+    A standalone Isaac Sim toolkit for evaluating grasps from
+    MultiGripperGrasp, Multidex, and DexGraspNet across grippers, objects,
+    and custom controllers.
+  kicker: February 2025
+  card_label: Toolkit
+  featured: false
+  group: tools
+  date_display: February 13, 2025
+  location: University of Texas at Dallas
+  project_type: Simulation toolkit
+  publication: multigrippergrasp
+  local_video: ""
+  video_path: assets/videos/multigrippergrasp-toolkit.mp4
+  role: >-
+    I announced the Toolkit 2.0 release. The code is in the IRVLUTD
+    isaac_sim_grasping repository.
+  paragraphs:
+    - >-
+      Toolkit 2.0 is a standalone Isaac Sim tool for evaluating grasps drawn
+      from MultiGripperGrasp, Multidex, and DexGraspNet. It runs those grasps
+      across grippers and objects and can use custom controllers. The
+      February 13, 2025 announcement pointed at the same repository used for
+      the MultiGripperGrasp experiments and noted that the repository had
+      passed 100 stars. The paper for the underlying dataset is the IROS 2024
+      MultiGripperGrasp paper. The CV’s star count (181) is older than that
+      announcement and is not repeated here as a current number.
+  links:
+    - label: Paper
+      status: ok
+      url: https://arxiv.org/abs/2403.09841
+    - label: Code
+      status: ok
+      url: https://github.com/IRVLUTD/isaac_sim_grasping
+    - label: Dataset project
+      status: ok
+      url: https://irvlutd.github.io/MultiGripperGrasp/
+  x_posts:
+    - url: https://x.com/lfcasas7/status/1890099324115103745
+      date: "2025-02-13"
+      embed: true
+      note: "Announcement video (posted as a GIF) of Toolkit 2.0."
+
+- slug: leap-inhand
+  title: LEAP Hand ROS package
+  summary: >-
+    ROS package with left and right LEAP Hand URDFs, sim-aligned control that
+    enforces joint limits, and services for position, velocity, and effort.
+  kicker: May 2025
+  card_label: LEAP
+  featured: false
+  group: tools
+  date_display: May 8, 2025
+  location: University of Texas at Dallas
+  project_type: ROS package
+  local_video: ""
+  video_path: assets/videos/leap-inhand.mp4
+  role: >-
+    I announced the package. The code is released under the IRVLUTD
+    organization as leap_inhand.
+  paragraphs:
+    - >-
+      leap_inhand is a ROS repository for the LEAP Hand. It includes left and
+      right URDFs that can be viewed in RViz, control aligned with simulation
+      and enforced against joint limits, and services for position, velocity,
+      and effort. There is no separate paper. The package was announced on
+      May 8, 2025.
+  links:
+    - label: Paper
+      status: na
+    - label: Code
+      status: ok
+      url: https://github.com/IRVLUTD/leap_inhand
+  x_posts:
+    - url: https://x.com/lfcasas7/status/1920606843937677429
+      date: "2025-05-08"
+      embed: true
+      note: "Announcement video of the LEAP Hand URDF in RViz and the control services."
+
+- slug: fetch-netft
+  title: fetch_netft
+  summary: >-
+    ROS package that streams an ATI Net F/T force-torque sensor on the Fetch
+    robot as a WrenchStamped topic.
+  kicker: March 2025
+  card_label: Net F/T
+  featured: false
+  group: tools
+  date_display: March 4, 2025
+  location: University of Texas at Dallas
+  project_type: ROS package
+  local_video: ""
+  video_path: assets/videos/fetch-netft.mp4
+  role: >-
+    I announced the package. It lives in the IRVLUTD fetch_ros_IRVL
+    repository.
+  paragraphs:
+    - >-
+      fetch_netft publishes data from an ATI Net F/T force-torque sensor on
+      the Fetch robot as a WrenchStamped topic. It is part of fetch_ros_IRVL.
+      There is no separate paper. The package was announced on March 4, 2025.
+  links:
+    - label: Paper
+      status: na
+    - label: Code
+      status: ok
+      url: https://github.com/IRVLUTD/fetch_ros_IRVL
+  x_posts:
+    - url: https://x.com/lfcasas7/status/1896969667153117603
+      date: "2025-03-04"
+      embed: true
+      note: "Announcement video of the force-torque stream on the Fetch robot."
+
+- slug: ale-hand-ra
+  title: Ale-HAND-Ra
+  summary: >-
+    Design and development of a low-cost, open-source humanoid robotic hand,
+    published in Materials Science Forum.
+  kicker: "2026"
+  card_label: Ale-HAND-Ra
+  featured: false
+  group: hardware
+  date_display: "2026"
+  project_type: Robot hardware
+  publication: ale-hand-ra
+  local_video: ""
+  video_path: assets/videos/ale-hand-ra.mp4
+  role: Co-author, with Hillary Velásquez, Marcela Lagos, and Fávell Núñez.
+  role_todo: >-
+    Add a longer note on your part of the design if you want it public.
+  paragraphs:
+    - >-
+      Ale-HAND-Ra is a low-cost, open-source humanoid robotic hand, published
+      in Materials Science Forum in 2026. This site only has the citation so
+      far. The previous site and the public posts do not describe the mechanism
+      or link to code, and they do not include figures.
+  images_todo: >-
+    Add photographs or figures of Ale-HAND-Ra, if they can be shared.
+  links:
+    - label: Paper
+      status: ok
+      url: https://doi.org/10.4028/p-wzT8b4
+    - label: Code
+      status: todo
+      note: no public repository is known
+
+- slug: frontier-mining
+  title: Frontier Mining hardware collaboration
+  summary: >-
+    Ongoing industry collaboration on novel robot hardware design, named on
+    the CV. Public details are not available yet.
+  kicker: Ongoing
+  card_label: Frontier
+  featured: false
+  group: hardware
+  date_display: Ongoing during the Ph.D.
+  location: With UT Dallas
+  project_type: Industry collaboration
+  local_video: ""
+  video_path: assets/videos/frontier-mining.mp4
+  role: Named on the CV as current Ph.D. work.
+  role_todo: Confirm a public one-line description of your role.
+  paragraphs:
+    - >-
+      The CV lists, under current projects, an industry collaboration on novel
+      robot hardware design for Frontier Mining. That is the only public
+      description. Nothing here adds to it.
+  images_todo: >-
+    Add figures only if the collaboration can be shown. It may be confidential.
+  links:
+    - label: Paper
+      status: na
+    - label: Code
+      status: todo
+      note: confirm whether any code or hardware detail can be public; it may be confidential
+
+- slug: renal-analysis
+  title: Automated renal analysis
+  summary: >-
+    Convolutional models for hydronephrosis detection and kidney segmentation
+    on ultrasound, with RWTH Uniklinik.
+  kicker: February 2024
+  card_label: Renal
+  featured: false
+  group: earlier
+  date_display: Project September 2022 · paper February 2024
+  location: Aachen, Germany
+  project_type: Computer vision
+  publication: renal
+  local_video: ""
+  video_path: assets/videos/renal-analysis.mp4
+  role: Co-author. The work was done with RWTH Uniklinik.
+  paragraphs:
+    - >-
+      Published as “Harnessing Artificial Intelligence for Enhanced Renal
+      Analysis: Automated Detection of Hydronephrosis and Precise Kidney
+      Segmentation,” European Urology Open Science, February 2024.
+  sections:
+    - heading: Background and objective
+      text: >-
+        Hydronephrosis is essential in the diagnosis of renal colic. We
+        automated the detection of hydronephrosis from ultrasound images to
+        standardize the therapy and reduce the misdiagnosis of renal colic.
+    - heading: Methods
+      text: >-
+        Anonymously collected ultrasound images of human kidneys, both normal
+        and hydronephrotic, were preprocessed for neural networks. Six
+        “state of the art” models were trained and cross-validated for the
+        detection of hydronephrosis, and two convolutional networks were used
+        for kidney segmentation. In the testing phase, performance metrics
+        included true positives, true negatives, false positives, false
+        negatives, accuracy, and F1 score, while the evaluation of the
+        segmentation task involved accuracy, precision, dice, jaccard, recall,
+        and ASSD.
+    - heading: Key findings and limitations
+      text: >-
+        A total of 523 sonographic kidney images (423 nonhydronephrotic and
+        100 hydronephrotic) were collected from three different ultrasound
+        devices. After training on this dataset, all models were used to
+        evaluate 200 new ultrasound kidney images (142 nonhydronephrotic and
+        58 hydronephrotic kidneys). The highest validation accuracy (98.5%)
+        was achieved by the AlexNet model (GoogLeNet 97%, AlexNet_v2 96%,
+        ResNet50 96%, ResNet101 97.5%, and ResNet152 95%). The
+        deeplabv3_resnet50 and deeplabv3_resnet101 models reached a dice
+        coefficient of 94.74% and 94.48%, respectively, on automated kidney
+        segmentation. The study is limited by analyzing only hydronephrosis,
+        but this specific focus enabled high detection accuracy.
+    - heading: Conclusions and clinical implications
+      text: >-
+        We show that our automated ultrasound deep learning model can be
+        trained and used to interpret and segmentate ultrasound images from
+        different sources with high accuracy. This method will serve as an
+        automated tool in the diagnostic algorithm of acute renal failure in
+        the future.
+    - heading: Patient summary
+      text: >-
+        Hydronephrosis is crucial in the diagnosis of renal colic. Recent
+        advances in artificial intelligence allow automated detection of
+        hydronephrosis in ultrasound images with high accuracy. These methods
+        will help standardize the diagnosis and treatment of renal colic.
+  links:
+    - label: Paper
+      status: ok
+      url: https://doi.org/10.1016/j.euros.2024.01.017
+    - label: PubMed
+      status: ok
+      url: https://pubmed.ncbi.nlm.nih.gov/38585207/
+    - label: Code
+      status: todo
+      note: no public repository is known
+  card_image:
+    src: /assets/images/opt/renal-overlay.jpg
+    width: 622
+    height: 378
+  images:
+    - src: /assets/images/opt/renal-overlay.jpg
+      width: 622
+      height: 378
+      alt: Two kidney ultrasound panels, A and B, with colored segmentation overlays.
+    - src: /assets/images/opt/renal-overlay-b.jpg
+      width: 777
+      height: 472
+      alt: A second pair of kidney ultrasound panels, A and B, with colored segmentation overlays.
+    - src: /assets/images/opt/renal-panels.jpg
+      width: 630
+      height: 360
+      alt: Four small ultrasound panels labeled A through D.
+    - src: /assets/images/opt/renal-ultrasound.jpg
+      width: 421
+      height: 357
+      alt: Kidney ultrasound image.
+    - src: /assets/images/opt/renal-closeup.jpg
+      width: 382
+      height: 372
+      alt: Close grayscale ultrasound of a kidney.
+    - src: /assets/images/opt/renal-pipeline.jpg
+      width: 611
+      height: 332
+      alt: Flowchart of the renal-analysis pipeline, from ultrasound input to a result.
+
+- slug: digital-twin
+  title: "Experimental digital twin for job shops"
+  summary: >-
+    Unity ML-Agents environment for multi-agent scheduling and transport in
+    flexible assembly shops. The learned agents beat priority dispatching
+    rules.
+  kicker: LION 2023
+  card_label: Digital twin
+  featured: false
+  group: earlier
+  date_display: Thesis December 2022 · LION 2023
+  location: Aachen, Germany
+  project_type: Reinforcement learning, job-shop scheduling with transportation
+  publication: digital-twin
+  local_video: ""
+  video_path: assets/videos/digital-twin.mp4
+  role: >-
+    Master's thesis. Co-author of the LION 2023 paper; the paper’s author
+    list begins with A. Gannouni.
+  paragraphs:
+    - >-
+      Factories are dealing with high product customization, more complex
+      products, and shorter lead times, so they need flexible assembly systems.
+      In those systems the shop-floor layout and the job schedule both have
+      to be redone often. Job-shop scheduling and layout planning are
+      NP-hard. Reinforcement learning has beaten several of the methods it has
+      been compared with, but many training environments still treat today’s
+      flexible assembly system as static.
+    - >-
+      This thesis proposes a configurable environment for optimizing flexible
+      assembly with multiple reinforcement-learning agents, so agents can be
+      trained quickly under different layouts and different job-shop instances.
+      The environment is built in the Unity simulator with the Unity ML-Agents
+      toolkit. An RL method was trained on several configurations and then
+      tested for agent scalability, job scalability, job-shop scalability, and
+      behavior under different shop-floor layouts.
+    - >-
+      Priority dispatching rules were implemented in the same environment.
+      The trained agents outperformed every rule they were compared with.
+      The environment’s visualization also made agent behavior inspectable:
+      while assembling products, the agents showed noticeable preferences
+      among actions.
+  links:
+    - label: Paper
+      status: ok
+      url: https://doi.org/10.1007/978-3-031-44505-7_25
+    - label: Code
+      status: todo
+      note: no public repository is known
+  card_image:
+    src: /assets/images/opt/thesis-layout.jpg
+    width: 889
+    height: 548
+  images:
+    - src: /assets/images/opt/thesis-comparison.jpg
+      width: 1368
+      height: 774
+      wide: true
+      alt: Chart titled “Comparisons with other methods,” from the master's thesis.
+    - src: /assets/images/opt/thesis-layout.jpg
+      width: 889
+      height: 548
+      alt: 3D view of a shop-floor layout with colored stations on a gray plane.
+    - src: /assets/images/opt/thesis-sim-1.jpg
+      width: 744
+      height: 453
+      alt: Top-down simulation with a few colored rectangular blocks.
+    - src: /assets/images/opt/thesis-sim-2.jpg
+      width: 590
+      height: 465
+      alt: Top-down simulation with colored blocks and small markers.
+    - src: /assets/images/opt/thesis-sim-3.jpg
+      width: 751
+      height: 452
+      alt: Top-down simulation with a larger set of colored blocks.
+    - src: /assets/images/opt/thesis-sim-4.jpg
+      width: 735
+      height: 440
+      alt: Top-down simulation with red, blue, and green blocks.
+
+- slug: vertical-farms
+  title: 3D reconstruction of vertical farms
+  summary: >-
+    Structure-from-motion reconstruction, point-cloud segmentation, and a
+    labeling tool for PointNet, during an internship at Hexafarms.
+  kicker: March 2022
+  card_label: Hexafarms
+  featured: false
+  group: earlier
+  date_display: March 2022
+  location: Saarbrücken, Germany
+  project_type: Computer vision, point-cloud segmentation
+  local_video: ""
+  video_path: assets/videos/vertical-farms.mp4
+  role: Internship project as AI Researcher Intern at Hexafarms GmbH.
+  paragraphs:
+    - >-
+      The project was the 3D reconstruction of vertical farms with
+      structure-from-motion, segmentation of the resulting models with the
+      C++ Point Cloud Library, and a labeling program for training PointNet.
+      The CV describes the reconstruction pipeline as using drone imagery.
+      Yield-prediction models from the same internship are listed on the
+      experience page rather than here.
+  links:
+    - label: Paper
+      status: todo
+      note: industry project; no paper is known
+    - label: Code
+      status: todo
+      note: no public repository is known
+    - label: Hexafarms
+      status: ok
+      url: https://www.hexafarms.com
+  card_image:
+    src: /assets/images/opt/farms-photo.jpg
+    width: 1600
+    height: 1200
+  images:
+    - src: /assets/images/opt/farms-photo.jpg
+      width: 1600
+      height: 1200
+      alt: Photograph of an indoor vertical farm, with stacked shelves of leafy plants under grow lights.
+    - src: /assets/images/opt/farms-pointcloud-racks.jpg
+      width: 1172
+      height: 532
+      wide: true
+      alt: Point-cloud reconstruction of tall grow racks.
+    - src: /assets/images/opt/farms-pointcloud-2.jpg
+      width: 1585
+      height: 928
+      alt: Point-cloud view of vegetation and structures from the vertical-farm reconstruction.
+    - src: /assets/images/opt/farms-pointcloud-3.jpg
+      width: 1585
+      height: 928
+      alt: Another point-cloud reconstruction from the vertical-farm project, seen from above.
+    - src: /assets/images/opt/farms-mesh.jpg
+      width: 445
+      height: 525
+      alt: Shaded brown 3D mesh from the vertical-farm reconstruction.
+    - src: /assets/images/opt/farms-pipeline.jpg
+      width: 1094
+      height: 531
+      wide: true
+      alt: Diagram of a processing pipeline with small photographs and a result panel, from the vertical-farm project.
+
+- slug: wildfire-detection
+  title: Wildfire early-detection system
+  summary: >-
+    Bachelor's thesis. A wireless sensor network with custom nodes, redundant
+    communication, and a web application for forest-fire detection.
+  kicker: January 2018
+  card_label: Wildfire
+  featured: false
+  group: earlier
+  date_display: January 2018
+  location: Tegucigalpa, Honduras
+  project_type: Wireless sensor networks
+  local_video: ""
+  video_path: assets/videos/wildfire-detection.mp4
+  role: Bachelor's thesis.
+  paragraphs:
+    - >-
+      A wildfire early-detection system built with a wireless sensor network.
+      The CV describes the thesis as the design and deployment of that network
+      for real-time forest-fire detection: custom sensor nodes, circuitry,
+      enclosures, PCB layout, a redundant communication protocol, and a web
+      application for live monitoring and alerts. The emphasis was embedded
+      systems, wireless sensor networks, network management, and system
+      testing and deployment.
+  links:
+    - label: Paper
+      status: todo
+      note: thesis PDF link is not on the previous site
+    - label: Code
+      status: todo
+      note: no public repository is known
+  card_image:
+    src: /assets/images/opt/wildfire-node-forest.jpg
+    width: 348
+    height: 312
+  images:
+    - src: /assets/images/opt/wildfire-node-forest.jpg
+      width: 348
+      height: 312
+      alt: Sensor node with a red cap, staked into a forest floor.
+    - src: /assets/images/opt/wildfire-node-closeup.jpg
+      width: 349
+      height: 312
+      alt: Close view of the red sensor node on the ground.
+    - src: /assets/images/opt/wildfire-map.jpg
+      width: 794
+      height: 720
+      alt: Diagram of a sensor network laid over a map.
+    - src: /assets/images/opt/wildfire-dashboard-map.jpg
+      width: 1371
+      height: 720
+      wide: true
+      alt: Web dashboard showing a map with sensor markers for the wildfire detection system.
+    - src: /assets/images/opt/wildfire-webapp.jpg
+      width: 645
+      height: 360
+      alt: Screenshot of a web page titled Prevención de Incendios, with a forest photograph.
+    - src: /assets/images/opt/wildfire-charts.jpg
+      width: 793
+      height: 417
+      alt: Monitoring dashboard with time-series charts.
+
+- slug: industrial-automation
+  title: Industrial automation
+  summary: >-
+    PLC labs and industrial network design in LabVIEW, from the courses
+    taught at UNITEC in 2023.
+  kicker: April 2023
+  card_label: PLC
+  featured: false
+  group: earlier
+  date_display: April 2023
+  location: Tegucigalpa, Honduras
+  project_type: Industrial automation, industrial networks
+  local_video: ""
+  video_path: assets/videos/industrial-automation.mp4
+  role: >-
+    University lecturer and laboratory instructor for the PLC course and the
+    Industrial Networks course.
+  paragraphs:
+    - >-
+      Industrial automation with industrial PLCs, and industrial network
+      design using LabVIEW. This is the lab work behind the courses taught at
+      UNITEC from April to June 2023. The labs used Siemens and Schneider
+      hardware and walked students through programming and commissioning.
+  links:
+    - label: Paper
+      status: na
+    - label: Code
+      status: na
+  card_image:
+    src: /assets/images/opt/plc-station.jpg
+    width: 738
+    height: 449
+  images:
+    - src: /assets/images/opt/plc-station.jpg
+      width: 738
+      height: 449
+      alt: Training bench with pneumatic cylinders, valves, and a control cabinet.
+    - src: /assets/images/opt/plc-detail.jpg
+      width: 1280
+      height: 446
+      wide: true
+      alt: Close view of pneumatic cylinders, tubing, and wiring on an automation bench.
+
+- slug: cam-robotic-arm
+  title: "CAM: CNC and a 3D-printed robotic arm"
+  summary: >-
+    Computer-assisted manufacturing with CNC machines and 3D printers,
+    including a 3D-printed robotic arm.
+  kicker: March 2016
+  card_label: CAM
+  featured: false
+  group: earlier
+  date_display: March 2016
+  location: Tegucigalpa, Honduras
+  project_type: Computer-assisted manufacturing
+  local_video: ""
+  video_path: assets/videos/cam-robotic-arm.mp4
+  role: Course project.
+  paragraphs:
+    - >-
+      Computer-assisted manufacturing project using CNC machines and 3D
+      printers, including a 3D-printed robotic arm.
+  links:
+    - label: Paper
+      status: na
+    - label: Code
+      status: todo
+      note: no repository was published with the project
+  card_image:
+    src: /assets/images/opt/cam-arm-1.jpg
+    width: 799
+    height: 900
+  images:
+    - src: /assets/images/opt/cam-arm-1.jpg
+      width: 799
+      height: 900
+      alt: Red 3D-printed robotic arm standing on a round base.
+    - src: /assets/images/opt/cam-arm-2.jpg
+      width: 800
+      height: 900
+      alt: Second view of the red 3D-printed robotic arm.
+
+- slug: cad-solidworks
+  title: CAD in SolidWorks
+  summary: Computer-assisted design project in SolidWorks.
+  kicker: November 2015
+  card_label: CAD
+  featured: false
+  group: earlier
+  date_display: November 2015
+  location: Tegucigalpa, Honduras
+  project_type: CAD, SolidWorks
+  local_video: ""
+  video_path: assets/videos/cad-solidworks.mp4
+  role: Course project.
+  paragraphs:
+    - Computer-assisted design project using SolidWorks.
+  links:
+    - label: Paper
+      status: na
+    - label: Code
+      status: na
+  card_image:
+    src: /assets/images/opt/cad-r2d2-render.jpg
+    width: 794
+    height: 360
+  images:
+    - src: /assets/images/opt/cad-r2d2-render.jpg
+      width: 794
+      height: 360
+      alt: SolidWorks render of an R2-D2-style astromech.
+    - src: /assets/images/opt/cad-r2d2-render-2.jpg
+      width: 490
+      height: 360
+      alt: Second SolidWorks render of the same R2-D2-style model.
+    - src: /assets/images/opt/cad-r2d2-solidworks.jpg
+      width: 378
+      height: 450
+      alt: SolidWorks session showing the R2-D2-style model.

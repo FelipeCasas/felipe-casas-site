@@ -1,0 +1,32 @@
+---
+layout: default
+title: Research
+permalink: /research/
+description: Research statement and projects on dexterous manipulation, tools, hardware, and earlier work.
+---
+<div class="wrap">
+  <header class="page-header">
+    <h1>Research</h1>
+    <p class="lede">Robotic manipulation at the <a href="{{ site.data.profile.lab_url }}">Intelligent Robots and Vision Lab</a>, with <a href="{{ site.data.profile.advisor_url }}">Yu Xiang</a>.</p>
+  </header>
+  <div class="prose">
+    {% for para in site.data.profile.research %}
+      <p>{{ para }}</p>
+    {% endfor %}
+    <p><a href="{{ '/projects/uhas/' | relative_url }}">UHAS project</a> · <a href="{{ '/publications/#uhas' | relative_url }}">citation</a> · <a href="https://arxiv.org/abs/2607.03570">arXiv</a></p>
+  </div>
+
+  {% for group in site.data.groups %}
+    <section class="group" id="{{ group.id }}">
+      <h2>{{ group.title }}</h2>
+      <p>{{ group.summary }}</p>
+      <div class="cards">
+        {% for project in site.data.projects %}
+          {% if project.group == group.id %}
+            {% include project-card.html project=project %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</div>

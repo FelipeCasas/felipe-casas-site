@@ -1,0 +1,3 @@
+---
+slug: cam-robotic-arm
+---

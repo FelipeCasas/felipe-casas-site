@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://felipecasas.github.io/felipe-casas-site/sitemap.xml
