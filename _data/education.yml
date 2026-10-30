@@ -1,4 +1,3 @@
-# Dates that disagree across the CV and the previous site are marked todo.
 - id: phd
   degree: Ph.D. in Computer Science
   school: The University of Texas at Dallas
@@ -9,9 +8,7 @@
   logo_width: 480
   logo_height: 480
   gpa: "4.0/4.0"
-  dates_todo: >-
-    Pick one start date. The CV says Aug. 2023–present. The previous site
-    says Sep. 2023–ongoing.
+  dates: Aug. 2023 – present
   highlights:
     - Recipient of the Louis Beecherl, Jr. Graduate Fellowship (2025–2026).
     - "Member of the Intelligent Robots and Vision Lab (IRVL). Advisor: Yu Xiang."
@@ -32,10 +29,7 @@
   logo_width: 431
   logo_height: 117
   gpa: "3.9/4.0"
-  dates_todo: >-
-    Pick one end date. The CV says Oct. 2019–November 2022. The previous
-    site says Oct. 2019–Dec. 2022. The thesis project is dated December 2022
-    on the previous site.
+  dates: Oct. 2019 – November 2022
   highlights:
     - Best of Class awards (February 2021 and July 2021) and member of the Dean's List.
     - "Thesis: a reinforcement-learning simulation environment for flexible assembly shops with multiple agents. Related paper at LION 2023."

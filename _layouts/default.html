@@ -51,6 +51,7 @@
       "url": {{ person.lab_url | jsonify }}
     },
     "sameAs": [
+      {{ person.scholar | jsonify }},
       {{ person.github | jsonify }},
       {{ person.x | jsonify }},
       {{ person.linkedin.url | jsonify }}

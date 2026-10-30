@@ -18,9 +18,7 @@
   org: Intelligent Robots and Vision Lab, UT Dallas
   org_url: https://labs.utdallas.edu/irvl/
   location: Richardson, TX
-  dates_todo: >-
-    Same start-date choice as education. The CV says Aug. 2023–present.
-    The previous site says Sep. 2023–ongoing.
+  dates: Aug. 2023 – present
   bullets:
     - Research on dexterous manipulation, robotic control policies, grasping, generative models, cross-embodiment learning, and zero-shot transfer.
     - "First author of UHAS, presented at the RSS 2026 Dexterous Manipulation Workshop."
