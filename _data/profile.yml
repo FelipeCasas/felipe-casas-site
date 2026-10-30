@@ -10,26 +10,16 @@ advisor_name: Yu Xiang
 advisor_url: https://yuxng.github.io
 university_url: https://www.utdallas.edu/
 
-# TODO: confirm before treating this as final. The CV prints the shorter
-# form linkedin.com/in/luis-felipe-casas-murillo (no numeric id).
 linkedin:
   url: https://www.linkedin.com/in/luis-felipe-casas-murillo-011356158/
-  confirmed: false
 
-# TODO: choose one address. Do not publish the phone number from the CV.
-email:
-  status: todo
-  candidates:
-    - lfcasas7@hotmail.com
-    - Luis.CasasMurillo@utdallas.edu
+email: lfcasas7@hotmail.com
 
 # TODO: paste the profile URL.
 scholar:
   status: todo
 
-# TODO: drop a PDF at this path (phone number removed) and set cv_pdf to the same path.
-cv_pdf: ""
-cv_pdf_expected: /assets/cv/Luis-Felipe-Casas-CV.pdf
+cv_pdf: /assets/cv/Luis-Felipe-Casas-CV.pdf
 
 # Unconfirmed headshot from the previous site's CV page.
 # The round image on the old home page is a GitHub icon, not a photo.

@@ -514,7 +514,49 @@ blockquote.twitter-tweet {
 
 .local-video, .x-list { padding: 1rem; }
 
-.local-video video { width: 100%; background: #111; border-radius: 8px; }
+.local-video video,
+.clip video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #141210;
+  border-radius: 12px;
+}
+
+.uhas-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.9fr);
+  gap: 1rem 1.4rem;
+  align-items: center;
+}
+
+.clip { margin: 0; }
+
+.clip figcaption {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.clip-list { display: grid; gap: 1.25rem; }
+
+.video-frame {
+  position: relative;
+  width: min(100%, 40rem);
+  aspect-ratio: 16 / 9;
+  margin: 0.75rem 0 0.4rem;
+  background: #141210;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 blockquote.twitter-tweet { margin: 0 0 0.8rem; padding: 0.8rem 1rem; }
 
@@ -584,7 +626,7 @@ ul.clean { margin-top: 0.3rem; padding-left: 1.1rem; }
 .fine { color: var(--muted); font-size: 0.92rem; }
 
 @media (max-width: 800px) {
-  .hero, .footer-grid, .news-list li, .cards { grid-template-columns: 1fr; }
+  .hero, .footer-grid, .news-list li, .cards, .uhas-hero { grid-template-columns: 1fr; }
   .hero-aside { order: -1; max-width: 16rem; }
   .portrait img { width: 9.5rem; height: 9.5rem; }
 }

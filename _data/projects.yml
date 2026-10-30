@@ -24,8 +24,37 @@
   location: University of Texas at Dallas
   project_type: Dexterous manipulation
   publication: uhas
-  local_video: ""
-  video_path: assets/videos/uhas.mp4
+  videos:
+    - src: /assets/videos/uhas/one-policy-four-hands.mp4
+      poster: /assets/videos/uhas/one-policy-four-hands.jpg
+      width: 1280
+      height: 720
+      caption: One policy, four hands (thread intro).
+      url: https://x.com/lfcasas7/status/2075670283575513462
+    - src: /assets/videos/uhas/cascade-ik.mp4
+      poster: /assets/videos/uhas/cascade-ik.jpg
+      width: 1280
+      height: 720
+      caption: Cascade Inverse Kinematics running at up to 150 Hz.
+      url: https://x.com/lfcasas7/status/2075670300260200830
+    - src: /assets/videos/uhas/zero-shot.mp4
+      poster: /assets/videos/uhas/zero-shot.jpg
+      width: 1280
+      height: 720
+      caption: Zero-shot transfer to unseen hands, including cross-morphology.
+      url: https://x.com/lfcasas7/status/2075670308585914734
+    - src: /assets/videos/uhas/sim-to-real.mp4
+      poster: /assets/videos/uhas/sim-to-real.jpg
+      width: 1280
+      height: 720
+      caption: Real-world in-hand cube reorientation on a LEAP Hand and an Allegro Hand.
+      url: https://x.com/lfcasas7/status/2075670311521927363
+    - src: /assets/videos/uhas/wuji-hand.mp4
+      poster: /assets/videos/uhas/wuji-hand.jpg
+      width: 1920
+      height: 1080
+      caption: Wuji Hand added to the training set.
+      url: https://x.com/lfcasas7/status/2075980423562236173
   role: >-
     First author of the workshop paper and of the project release. I announced
     the method, the RSS 2026 presentation, the Wuji Hand addition, and the
@@ -77,8 +106,8 @@
   x_posts:
     - url: https://x.com/lfcasas7/status/2075670283575513462
       date: "2026-07-10"
-      embed: true
-      note: "Thread 1/9. Announcement video: one policy controlling several hands."
+      embed: false
+      note: "Thread 1/9. Announcement video: one policy, four hands. The clip is above."
     - url: https://x.com/lfcasas7/status/2075670287337558493
       date: "2026-07-10"
       embed: false
@@ -93,20 +122,20 @@
       note: "Thread 4/9. Driving planes and driving vectors, and interpolation."
     - url: https://x.com/lfcasas7/status/2075670300260200830
       date: "2026-07-10"
-      embed: true
-      note: "Thread 5/9. Video of Cascade Inverse Kinematics, up to 150 Hz."
+      embed: false
+      note: "Thread 5/9. Cascade Inverse Kinematics, up to 150 Hz. The clip is above."
     - url: https://x.com/lfcasas7/status/2075670304542859555
       date: "2026-07-10"
       embed: false
       note: "Thread 6/9. The same sphere deformation produces coordinated poses across hands."
     - url: https://x.com/lfcasas7/status/2075670308585914734
       date: "2026-07-10"
-      embed: true
-      note: "Thread 7/9. Video of zero-shot cases, including unseen hands and four-finger versus five-finger morphology."
+      embed: false
+      note: "Thread 7/9. Zero-shot transfer, including unseen hands and four-finger versus five-finger morphology. The clip is above."
     - url: https://x.com/lfcasas7/status/2075670311521927363
       date: "2026-07-10"
-      embed: true
-      note: "Thread 8/9. Video of real-world in-hand cube reorientation on a LEAP Hand and an Allegro Hand."
+      embed: false
+      note: "Thread 8/9. Real-world LEAP Hand and Allegro Hand in-hand cube reorientation. The clip is above."
     - url: https://x.com/lfcasas7/status/2075670314801893874
       date: "2026-07-10"
       embed: false
@@ -117,8 +146,8 @@
       note: "Invitation to the RSS 2026 Dexterous Manipulation Workshop, where the paper was presented."
     - url: https://x.com/lfcasas7/status/2075980423562236173
       date: "2026-07-11"
-      embed: true
-      note: "Video. A Wuji Hand added to the UHAS training set by following the repository guides."
+      embed: false
+      note: "Wuji Hand added to the UHAS training set. The clip is above."
     - url: https://x.com/lfcasas7/status/2100701072264184274
       date: "2026-09-17"
       embed: true

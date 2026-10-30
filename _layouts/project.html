@@ -24,7 +24,13 @@ layout: default
     </header>
 
     <h2>Links</h2>
-    {% include resources.html items=project.links video_src=project.local_video %}
+    {% assign show_video = false %}
+    {% if project.videos and project.videos.size > 0 %}
+      {% assign show_video = true %}
+    {% elsif project.local_video and project.local_video != "" %}
+      {% assign show_video = true %}
+    {% endif %}
+    {% include resources.html items=project.links show_video=show_video %}
 
     {% if pub %}
       <p>Publication record: <a href="{{ '/publications/' | relative_url }}#{{ pub.id }}">{{ pub.title }}</a></p>
@@ -85,10 +91,19 @@ layout: default
 
     <h2 id="local-video">Video</h2>
     <div class="local-video">
-      {% if project.local_video and project.local_video != "" %}
-        <video controls preload="metadata">
-          <source src="{{ project.local_video | relative_url }}" type="video/mp4">
-        </video>
+      {% if project.videos and project.videos.size > 0 %}
+        <div class="clip-list">
+          {% for clip in project.videos %}
+            <figure class="clip">
+              <video muted loop playsinline preload="none" controls loading="lazy" data-lazy poster="{{ clip.poster | relative_url }}" width="{{ clip.width }}" height="{{ clip.height }}">
+                <source src="{{ clip.src | relative_url }}" type="video/mp4">
+              </video>
+              <figcaption>{{ clip.caption }} <a href="{{ clip.url }}">Post on X</a></figcaption>
+            </figure>
+          {% endfor %}
+        </div>
+      {% elsif project.local_video and project.local_video != "" %}
+        <video controls preload="metadata" src="{{ project.local_video | relative_url }}"></video>
       {% else %}
         <p class="todo-block"><span class="todo-flag">TODO</span> Video: coming soon. Add a file at <code>{{ project.video_path }}</code> and set <code>local_video</code> for <code>{{ project.slug }}</code> in <code>_data/projects.yml</code>.</p>
       {% endif %}
@@ -97,7 +112,7 @@ layout: default
     {% if project.x_posts %}
       <h2>Posts on X</h2>
       <div class="x-list">
-        <p class="source-note">Video posts are embedded from X. If an embed does not load, use the link. Each post also has a spot above for a local copy of the video.</p>
+        <p class="source-note">Clips saved on this site are in the video section above, each linked to its post. Remaining posts are linked here, and a post that still has no local file is embedded from X.</p>
         {% assign embed_count = 0 %}
         {% for post in project.x_posts %}
           {% if post.embed %}

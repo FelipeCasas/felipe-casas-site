@@ -13,10 +13,11 @@
 - date: "2026-08-17"
   display: August 17, 2026
   title: RoboPapers podcast, episode 97
-  text: Conversation with Chris Paxton and Jiafei Duan about UHAS. A direct episode URL is not in the source post.
+  text: Conversation with Chris Paxton and Jiafei Duan about UHAS.
   url: https://x.com/lfcasas7/status/2089163054210580932
+  youtube: https://www.youtube.com/watch?v=RfxFs0vEzs0
+  youtube_embed: https://www.youtube-nocookie.com/embed/RfxFs0vEzs0
   project: uhas
-  todo: Add the direct RoboPapers episode URL. The post used a short link that was not captured.
 - date: "2026-07-10"
   display: July 10, 2026
   title: UHAS released, and accepted at RSS 2026

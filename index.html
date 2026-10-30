@@ -21,18 +21,10 @@ description: >-
         <li><span class="todo"><span class="todo-flag">TODO</span> Google Scholar</span></li>
         <li><a rel="me" href="{{ site.data.profile.github }}">GitHub</a></li>
         <li><a rel="me" href="{{ site.data.profile.x }}">X</a></li>
-        <li><a rel="me" href="{{ site.data.profile.linkedin.url }}">LinkedIn</a> <span class="todo"><span class="todo-flag">TODO</span> Confirm URL</span></li>
-        <li><span class="todo"><span class="todo-flag">TODO</span> Email</span></li>
-        <li><a class="button primary" href="{{ '/cv/' | relative_url }}">CV</a></li>
+        <li><a rel="me" href="{{ site.data.profile.linkedin.url }}">LinkedIn</a></li>
+        <li><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></li>
+        <li><a class="button primary" href="{{ site.data.profile.cv_pdf | relative_url }}" download>CV</a></li>
       </ul>
-      <div class="todo-block">
-        <p><span class="todo-flag">TODO</span> Still to confirm before publishing contact details:</p>
-        <ul class="clean">
-          <li>Email: choose {{ site.data.profile.email.candidates | join: " or " }}. The phone number on the CV stays off this site.</li>
-          <li>Google Scholar URL, and ORCID if you want it listed. Add both in <code>_data/profile.yml</code>.</li>
-          <li>LinkedIn: the button uses {{ site.data.profile.linkedin.url }}. The CV prints the shorter form linkedin.com/in/luis-felipe-casas-murillo.</li>
-        </ul>
-      </div>
     </div>
     <aside class="hero-aside">
       <figure class="portrait">
@@ -42,17 +34,27 @@ description: >-
     </aside>
   </section>
 
-  <section class="paper-banner" aria-labelledby="uhas-banner">
-    <p class="kicker" id="uhas-banner">Latest paper</p>
-    <h2>Cross-Embodiment Robot Manipulation via a Unified Hand Action Space</h2>
-    <p>UHAS was accepted and presented at the RSS 2026 Dexterous Manipulation Workshop. One policy drives different dexterous hands through a shared spherical action space and Cascade Inverse Kinematics.</p>
-    <ul class="link-row">
-      <li><a href="https://arxiv.org/abs/2607.03570">Paper</a></li>
-      <li><a href="https://irvlutd.github.io/UHAS/">Project page</a></li>
-      <li><a href="https://github.com/IRVLUTD/UHAS_sim">Code</a></li>
-      <li><a href="https://x.com/lfcasas7/status/2075670283575513462">Thread on X</a></li>
-      <li><a href="{{ '/projects/uhas/' | relative_url }}">On this site</a></li>
-    </ul>
+  {% assign uhas = site.data.projects | where: "slug", "uhas" | first %}
+  {% assign hero_clip = uhas.videos | first %}
+  <section class="paper-banner uhas-hero" aria-labelledby="uhas-banner">
+    <div>
+      <p class="kicker" id="uhas-banner">Latest paper</p>
+      <h2>Cross-Embodiment Robot Manipulation via a Unified Hand Action Space</h2>
+      <p>UHAS was accepted and presented at the RSS 2026 Dexterous Manipulation Workshop. One policy drives different dexterous hands through a shared spherical action space and Cascade Inverse Kinematics.</p>
+      <ul class="link-row">
+        <li><a href="https://arxiv.org/abs/2607.03570">Paper</a></li>
+        <li><a href="https://irvlutd.github.io/UHAS/">Project page</a></li>
+        <li><a href="https://github.com/IRVLUTD/UHAS_sim">Code</a></li>
+        <li><a href="{{ hero_clip.url }}">Thread on X</a></li>
+        <li><a href="{{ '/projects/uhas/' | relative_url }}">On this site</a></li>
+      </ul>
+    </div>
+    <figure class="clip">
+      <video muted loop playsinline autoplay preload="metadata" poster="{{ hero_clip.poster | relative_url }}" width="{{ hero_clip.width }}" height="{{ hero_clip.height }}">
+        <source src="{{ hero_clip.src | relative_url }}" type="video/mp4">
+      </video>
+      <figcaption>{{ hero_clip.caption }} <a href="{{ hero_clip.url }}">Post on X</a></figcaption>
+    </figure>
   </section>
 
   <div class="section-head">
@@ -78,7 +80,8 @@ description: >-
         <div>
           <strong>{{ item.title }}</strong>
           <p>{{ item.text }}</p>
-          {% if item.url %}<a href="{{ item.url }}">Post</a>{% endif %}
+          {% if item.youtube %}<a href="{{ item.youtube }}">Episode</a>{% endif %}
+          {% if item.url %}{% if item.youtube %} · {% endif %}<a href="{{ item.url }}">Post</a>{% endif %}
           {% if item.project %} · <a href="{{ item.project | prepend: '/projects/' | append: '/' | relative_url }}">Project</a>{% endif %}
         </div>
       </li>

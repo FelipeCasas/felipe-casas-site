@@ -10,8 +10,8 @@
       {% endif %}
     </li>
   {% endfor %}
-  {% if include.video_src and include.video_src != "" %}
-    <li><a href="#local-video">Local video</a></li>
+  {% if include.show_video %}
+    <li><a href="#local-video">Video</a></li>
   {% else %}
     <li><span class="resource is-todo"><span class="todo-flag">TODO</span> Video: coming soon</span></li>
   {% endif %}

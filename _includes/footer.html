@@ -8,12 +8,13 @@
       <ul class="footer-links">
         <li><a rel="me" href="{{ site.data.profile.github }}">GitHub</a></li>
         <li><a rel="me" href="{{ site.data.profile.x }}">X</a></li>
-        <li><a rel="me" href="{{ site.data.profile.linkedin.url }}">LinkedIn <span class="sr-only">(URL not confirmed)</span></a></li>
+        <li><a rel="me" href="{{ site.data.profile.linkedin.url }}">LinkedIn</a></li>
+        <li><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></li>
         <li><a href="{{ site.data.profile.lab_url }}">IRVL</a></li>
-        <li><a href="{{ '/cv/' | relative_url }}">CV</a></li>
+        <li><a href="{{ site.data.profile.cv_pdf | relative_url }}" download>CV (PDF)</a></li>
       </ul>
       <p class="fine">© {{ 'now' | date: '%Y' }} {{ site.data.profile.name }}. Built with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
-      <p class="fine">Content is drawn from the previous personal site, the CV, and public posts. Phone number is not published here.</p>
+      <p class="fine">Content is drawn from the previous personal site, the CV, and public posts.</p>
     </div>
   </div>
 </footer>
