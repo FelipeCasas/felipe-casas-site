@@ -1,0 +1,115 @@
+---
+layout: default
+title: About
+permalink: /about/
+description: Background, education, languages, skills, and honors for Luis Felipe Casas Murillo.
+---
+<div class="wrap">
+  <header class="page-header">
+    <h1>About</h1>
+    <p class="lede">{{ site.data.profile.role }}</p>
+  </header>
+
+  <div class="prose">
+    {% for para in site.data.profile.bio %}
+      <p>{{ para }}</p>
+    {% endfor %}
+  </div>
+
+  <section class="paper-banner" aria-labelledby="about-uhas">
+    <p class="kicker" id="about-uhas">Selected paper</p>
+    <h2>UHAS, RSS 2026</h2>
+    <p>Cross-Embodiment Robot Manipulation via a Unified Hand Action Space. Luis Felipe Casas, Robert Teal, Keval Shah, Abhijit Tadepalli, Wanxin Jin, and Yu Xiang. Accepted and presented at the 4th Workshop on Dexterous Manipulation, Robotics: Science and Systems, 2026.</p>
+    <ul class="link-row">
+      <li><a href="{{ '/projects/uhas/' | relative_url }}">Project</a></li>
+      <li><a href="{{ '/publications/#uhas' | relative_url }}">Citation</a></li>
+      <li><a href="https://arxiv.org/abs/2607.03570">arXiv</a></li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="timeline">
+      {% for item in site.data.education %}
+        <article id="edu-{{ item.id }}">
+          {% if item.logo %}
+            <p class="logo-row">
+              <img src="{{ item.logo | relative_url }}" width="{{ item.logo_width }}" height="{{ item.logo_height }}" alt="{{ item.logo_alt }}">
+            </p>
+          {% endif %}
+          <h3>{{ item.degree }}</h3>
+          <p><a href="{{ item.school_url }}">{{ item.school }}</a>{% if item.location %} · {{ item.location }}{% endif %}{% if item.gpa %} · GPA {{ item.gpa }}{% endif %}</p>
+          {% if item.dates_todo %}
+            <p class="todo-block"><span class="todo-flag">TODO</span> {{ item.dates_todo }}</p>
+          {% else %}
+            <p>{{ item.dates }}</p>
+          {% endif %}
+          <ul class="clean">
+            {% for line in item.highlights %}
+              <li>{{ line }}</li>
+            {% endfor %}
+          </ul>
+          {% if item.program %}
+            <details>
+              <summary>Program notes from the previous site</summary>
+              <ul class="clean">
+                {% for line in item.program %}
+                  <li>{{ line }}</li>
+                {% endfor %}
+              </ul>
+            </details>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="languages">
+    <h2>Languages</h2>
+    <ul class="clean">
+      {% for lang in site.data.skills.languages %}
+        <li>{{ lang.name }} — {{ lang.level }}{% if lang.note %}. <span class="source-note">{{ lang.note }}</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-grid">
+      {% for group in site.data.skills.groups %}
+        <article>
+          <h3>{{ group.title }}</h3>
+          <ul class="clean">
+            {% for item in group.items %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+      {% endfor %}
+    </div>
+    <h3>Working style</h3>
+    <ul class="clean">
+      {% for item in site.data.skills.working_style %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id="honors">
+    <h2>Honors and certificates</h2>
+    <ul class="clean">
+      {% for item in site.data.honors.selected %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    <details>
+      <summary>Full list from the CV and the previous site</summary>
+      <ul class="clean">
+        {% for item in site.data.honors.full %}
+          <li>{{ item.date }} — {{ item.text }}{% if item.url %} <a href="{{ item.url }}">Post</a>{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </details>
+    <p class="source-note">Phi Kappa Phi and a renewed IEEE-RAS membership appear only in a commented block of the CV, so they are not listed.</p>
+  </section>
+</div>

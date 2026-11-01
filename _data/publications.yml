@@ -1,0 +1,180 @@
+# Add a paper by appending an entry. Link a project with `project: <slug>`.
+- id: uhas
+  featured: true
+  title: "Cross-Embodiment Robot Manipulation via a Unified Hand Action Space"
+  year: "2026"
+  venue: "4th Workshop on Dexterous Manipulation at Robotics: Science and Systems (RSS)"
+  project: uhas
+  authors:
+    - name: Luis Felipe Casas
+      me: true
+    - name: Robert Teal
+    - name: Keval Shah
+    - name: Abhijit Tadepalli
+    - name: Wanxin Jin
+    - name: Yu Xiang
+  links:
+    - label: arXiv:2607.03570
+      url: https://arxiv.org/abs/2607.03570
+    - label: Project page
+      url: https://irvlutd.github.io/UHAS/
+    - label: Code
+      url: https://github.com/IRVLUTD/UHAS_sim
+    - label: Workshop
+      url: https://dex-manipulation.github.io/rss2026/
+    - label: Announcement thread
+      url: https://x.com/lfcasas7/status/2075670283575513462
+  bibtex: |
+    @inproceedings{casas2026uhas,
+      title = {Cross-Embodiment Robot Manipulation via a Unified Hand Action Space},
+      author = {Casas, Luis Felipe and Teal, Robert and Shah, Keval and Tadepalli, Abhijit and Jin, Wanxin and Xiang, Yu},
+      booktitle = {4th Workshop on Dexterous Manipulation at Robotics: Science and Systems (RSS)},
+      year = {2026},
+      url = {https://arxiv.org/abs/2607.03570}
+    }
+- id: ale-hand-ra
+  title: "Ale-HAND-Ra: Design and Development of a Low-Cost, Open-Source Humanoid Robotic Hand"
+  year: "2026"
+  venue: Materials Science Forum
+  project: ale-hand-ra
+  code_todo: No public code link is known.
+  authors:
+    - name: Hillary Velásquez
+    - name: Marcela Lagos
+    - name: Fávell Núñez
+    - name: L. F. Casas
+      me: true
+  links:
+    - label: DOI
+      url: https://doi.org/10.4028/p-wzT8b4
+  bibtex: |
+    @article{velasquez2026alehandra,
+      title = {Ale-HAND-Ra: Design and Development of a Low-Cost, Open-Source Humanoid Robotic Hand},
+      author = {Velásquez, Hillary and Lagos, Marcela and Núñez, Fávell and Casas, L. F.},
+      journal = {Materials Science Forum},
+      year = {2026},
+      doi = {10.4028/p-wzT8b4}
+    }
+- id: robotfingerprint
+  title: "RobotFingerPrint: Unified Gripper Coordinate Space for Multi-Gripper Grasp Synthesis and Transfer"
+  year: "2025"
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+  note: arXiv preprint posted in 2024. The conference version is IROS 2025. A poster was presented at TEROS 2026.
+  project: robotfingerprint
+  authors:
+    - name: Ninad Khargonkar
+    - name: Luis Felipe Casas
+      me: true
+    - name: Balakrishnan Prabhakaran
+    - name: Yu Xiang
+  links:
+    - label: arXiv:2409.14519
+      url: https://arxiv.org/abs/2409.14519
+    - label: Project page
+      url: https://irvlutd.github.io/RobotFingerPrint/
+    - label: Code
+      url: https://github.com/IRVLUTD/robot-finger-print
+    - label: TEROS 2026 poster post
+      url: https://x.com/lfcasas7/status/2040495582792351877
+  bibtex: |
+    @inproceedings{khargonkar2025robotfingerprint,
+      title = {RobotFingerPrint: Unified Gripper Coordinate Space for Multi-Gripper Grasp Synthesis and Transfer},
+      author = {Khargonkar, Ninad and Casas, Luis Felipe and Prabhakaran, Balakrishnan and Xiang, Yu},
+      booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+      year = {2025},
+      url = {https://arxiv.org/abs/2409.14519}
+    }
+- id: multigrippergrasp
+  title: "MultiGripperGrasp: A Dataset for Robotic Grasping from Parallel Jaw Grippers to Dexterous Hands"
+  year: "2024"
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+  note: Presented at IROS 2024.
+  project: multigrippergrasp
+  equal_contribution: Luis Felipe Casas and Ninad Khargonkar
+  authors:
+    - name: Luis Felipe Casas
+      me: true
+    - name: Ninad Khargonkar
+    - name: Balakrishnan Prabhakaran
+    - name: Yu Xiang
+  links:
+    - label: arXiv:2403.09841
+      url: https://arxiv.org/abs/2403.09841
+    - label: DOI
+      url: https://doi.org/10.48550/arXiv.2403.09841
+    - label: Project page
+      url: https://irvlutd.github.io/MultiGripperGrasp/
+    - label: Isaac Sim code
+      url: https://github.com/IRVLUTD/isaac_sim_grasping
+    - label: Dataset generation
+      url: https://github.com/IRVLUTD/neuralgrasps-dataset-generation/tree/multigrippergrasp
+  bibtex: |
+    @inproceedings{casas2024multigrippergrasp,
+      title = {MultiGripperGrasp: A Dataset for Robotic Grasping from Parallel Jaw Grippers to Dexterous Hands},
+      author = {Casas, Luis Felipe and Khargonkar, Ninad and Prabhakaran, Balakrishnan and Xiang, Yu},
+      booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+      year = {2024},
+      doi = {10.48550/arXiv.2403.09841},
+      url = {https://arxiv.org/abs/2403.09841},
+      note = {Equal contribution: Casas and Khargonkar}
+    }
+- id: renal
+  title: "Harnessing Artificial Intelligence for Enhanced Renal Analysis: Automated Detection of Hydronephrosis and Precise Kidney Segmentation"
+  year: "2024"
+  venue: European Urology Open Science
+  note: Published February 2024. PMID 38585207.
+  project: renal-analysis
+  code_todo: No public code link is known.
+  authors:
+    - name: Radu Alexa
+    - name: Jennifer Kranz
+    - name: Rafael Kramann
+    - name: Christoph Kuppe
+    - name: Ritabrata Sanyal
+    - name: Sikander Hayat
+    - name: Luis Felipe Casas Murillo
+      me: true
+    - name: Turkan Hajili
+    - name: Marco Hoffmann
+    - name: Matthias Saar
+  links:
+    - label: DOI
+      url: https://doi.org/10.1016/j.euros.2024.01.017
+    - label: PubMed
+      url: https://pubmed.ncbi.nlm.nih.gov/38585207/
+  bibtex: |
+    @article{alexa2024renal,
+      title = {Harnessing Artificial Intelligence for Enhanced Renal Analysis: Automated Detection of Hydronephrosis and Precise Kidney Segmentation},
+      author = {Alexa, Radu and Kranz, Jennifer and Kramann, Rafael and Kuppe, Christoph and Sanyal, Ritabrata and Hayat, Sikander and Casas Murillo, Luis Felipe and Hajili, Turkan and Hoffmann, Marco and Saar, Matthias},
+      journal = {European Urology Open Science},
+      year = {2024},
+      doi = {10.1016/j.euros.2024.01.017},
+      pmid = {38585207}
+    }
+- id: digital-twin
+  title: "Experimental Digital Twin for Job Shops with Transportation Agents"
+  year: "2023"
+  venue: Learning and Intelligent Optimization (LION 2023), LNCS 14286
+  project: digital-twin
+  code_todo: No public code link is known.
+  authors:
+    - name: A. Gannouni
+    - name: L. F. Casas Murillo
+      me: true
+    - name: M. Kemmerling
+    - name: A. Abdelrazeq
+    - name: R. H. Schmitt
+  links:
+    - label: DOI
+      url: https://doi.org/10.1007/978-3-031-44505-7_25
+  bibtex: |
+    @inproceedings{gannouni2023digitaltwin,
+      title = {Experimental Digital Twin for Job Shops with Transportation Agents},
+      author = {Gannouni, A. and Casas Murillo, L. F. and Kemmerling, M. and Abdelrazeq, A. and Schmitt, R. H.},
+      booktitle = {Learning and Intelligent Optimization (LION)},
+      series = {Lecture Notes in Computer Science},
+      volume = {14286},
+      year = {2023},
+      publisher = {Springer},
+      doi = {10.1007/978-3-031-44505-7_25}
+    }

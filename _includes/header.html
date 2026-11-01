@@ -1,0 +1,19 @@
+{% assign here = page.url %}
+{% if page.collection == "projects" %}
+  {% assign here = "/projects/" %}
+{% endif %}
+<header class="site-header">
+  <div class="wrap inner">
+    <a class="brand" href="{{ '/' | relative_url }}">Luis Felipe Casas</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" hidden>Menu</button>
+    <nav aria-label="Primary">
+      <ul id="site-menu">
+        {% for item in site.data.profile.nav %}
+          <li>
+            <a href="{{ item.url | relative_url }}"{% if here == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

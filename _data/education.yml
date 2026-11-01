@@ -1,0 +1,58 @@
+- id: phd
+  degree: Ph.D. in Computer Science
+  school: The University of Texas at Dallas
+  school_url: https://www.utdallas.edu/
+  location: Richardson, TX
+  logo: /assets/images/logos/utd-seal.jpg
+  logo_alt: Seal of The University of Texas at Dallas
+  logo_width: 480
+  logo_height: 480
+  gpa: "4.0/4.0"
+  dates: Aug. 2023 – present
+  highlights:
+    - Recipient of the Louis Beecherl, Jr. Graduate Fellowship (2025–2026).
+    - "Member of the Intelligent Robots and Vision Lab (IRVL). Advisor: Yu Xiang."
+    - Research in dexterous manipulation, robotic control policies, robot grasping, generative models, cross-embodiment learning, zero-shot transfer, and perception.
+    - "Platform work: design, upgrade, and maintain robots used for dexterous-manipulation research, including cameras, force-torque sensors, and IMUs."
+    - "UHAS: cross-embodiment dexterous manipulation, presented at the RSS 2026 Dexterous Manipulation Workshop."
+    - "RobotFingerPrint: generative model for a unified gripper coordinate space (IROS 2025)."
+    - "MultiGripperGrasp: open dataset of 30.4M grasps across 11 grippers (IROS 2024)."
+    - Benchmarked grasping and manipulation methods across embodiments in MuJoCo, Gazebo, Isaac Sim, and ROS / ROS 2.
+    - Current industry collaboration on robot hardware design for Frontier Mining.
+- id: msc
+  degree: M.Sc. in Robotic Systems Engineering
+  school: RWTH Aachen University
+  school_url: https://www.academy.rwth-aachen.de/en/education-formats/msc-degree-programmes/robosys
+  location: Aachen, Germany
+  logo: /assets/images/logos/rwth-wordmark.png
+  logo_alt: RWTH Aachen University wordmark
+  logo_width: 431
+  logo_height: 117
+  gpa: "3.9/4.0"
+  dates: Oct. 2019 – November 2022
+  highlights:
+    - Best of Class awards (February 2021 and July 2021) and member of the Dean's List.
+    - "Thesis: a reinforcement-learning simulation environment for flexible assembly shops with multiple agents. Related paper at LION 2023."
+    - "Automated renal analysis with RWTH Uniklinik, published February 2024 in European Urology Open Science."
+  program:
+    - Development, implementation, and programming of robotic systems for different levels of autonomy.
+    - Design of industrial robots.
+    - Mechanics, electric drives, sensor technology, and information processing for robotic systems.
+    - Organization and monitoring of operation and manufacturing processes.
+    - Robotic systems for embedded production systems or autonomous warehouses.
+    - AI and machine-learning techniques in robotic systems.
+- id: bsc
+  degree: B.Sc. in Mechatronics Engineering
+  school: Central American Technological University (UNITEC)
+  school_url: https://www.unitec.edu/carreras/presencial/ingenieria-en-mecatronica/
+  location: Tegucigalpa, Honduras
+  dates: Jul. 2013 – Feb. 2018
+  gpa: "4.0/4.0"
+  highlights:
+    - Graduated magna cum laude. Best of class, with several highest-grade recognitions from 2014 to 2018.
+    - "Thesis: a wildfire early-detection system using a wireless sensor network."
+    - Co-founder of the IEEE-RAS Student Chapter, and president of the Mechatronics Engineering Student Association in 2017.
+  program:
+    - Mathematics and physics, including electromagnetism, thermodynamics, fluid mechanics, statics, and dynamics.
+    - Control engineering, mechanics, electronics, informatics, and automation, with electives focused on automation.
+    - "Programming and tools: PLC and ladder logic, CAD/CAM (SolidWorks, 3D printing, Fusion 360), microcontrollers in C++, PHP and SQL, LabVIEW, MATLAB, and Simulink."

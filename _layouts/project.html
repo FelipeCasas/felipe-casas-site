@@ -1,0 +1,159 @@
+---
+layout: default
+---
+{% assign project = site.data.projects | where: "slug", page.slug | first %}
+{% assign projects = site.data.projects %}
+<article class="wrap stack">
+  {% unless project %}
+    <p class="todo-block"><span class="todo-flag">TODO</span> No entry in <code>_data/projects.yml</code> for slug “{{ page.slug }}”.</p>
+  {% else %}
+    {% assign pub = nil %}
+    {% if project.publication %}
+      {% assign pub = site.data.publications | where: "id", project.publication | first %}
+    {% endif %}
+    {% assign group = site.data.groups | where: "id", project.group | first %}
+    <header class="page-header">
+      <p class="kicker">{{ project.kicker }}{% if group %} · {{ group.title }}{% endif %}</p>
+      <h1>{{ project.title }}</h1>
+      <p class="lede">{{ project.summary }}</p>
+      <ul class="meta">
+        {% if project.date_display %}<li>{{ project.date_display }}</li>{% endif %}
+        {% if project.location %}<li>{{ project.location }}</li>{% endif %}
+        {% if project.project_type %}<li>{{ project.project_type }}</li>{% endif %}
+      </ul>
+    </header>
+
+    <h2>Links</h2>
+    {% assign show_video = false %}
+    {% if project.videos and project.videos.size > 0 %}
+      {% assign show_video = true %}
+    {% elsif project.local_video and project.local_video != "" %}
+      {% assign show_video = true %}
+    {% endif %}
+    {% include resources.html items=project.links show_video=show_video %}
+
+    {% if pub %}
+      <p>Publication record: <a href="{{ '/publications/' | relative_url }}#{{ pub.id }}">{{ pub.title }}</a></p>
+      {% if pub.authors %}
+        <p class="authors">
+          {% for author in pub.authors %}
+            {% if author.me %}<strong class="me">{{ author.name }}</strong>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+          {% if pub.equal_contribution %}<br><span class="source-note">Equal contribution: {{ pub.equal_contribution }}.</span>{% endif %}
+        </p>
+      {% endif %}
+    {% endif %}
+
+    <h2>Overview</h2>
+    <div class="prose">
+      {% for para in project.paragraphs %}
+        <p>{{ para }}</p>
+      {% endfor %}
+      {% if project.sections %}
+        {% for section in project.sections %}
+          <h3>{{ section.heading }}</h3>
+          <p>{{ section.text }}</p>
+        {% endfor %}
+      {% endif %}
+      {% if project.note %}
+        <p class="source-note">{{ project.note }}</p>
+      {% endif %}
+    </div>
+
+    <h2>My role</h2>
+    <div class="prose">
+      {% if project.role_todo %}
+        <p class="todo-block"><span class="todo-flag">TODO</span> {{ project.role_todo }}</p>
+      {% endif %}
+      {% if project.role %}
+        <p>{{ project.role }}</p>
+      {% endif %}
+    </div>
+
+    {% if project.images or project.images_todo %}
+      <h2>Figures</h2>
+      {% if project.images_todo %}
+        <p class="todo-block"><span class="todo-flag">TODO</span> {{ project.images_todo }}</p>
+      {% endif %}
+      {% if project.images %}
+        <ul class="gallery">
+          {% for image in project.images %}
+            <li{% if image.wide %} class="wide"{% endif %}>
+              <figure>
+                <img src="{{ image.src | relative_url }}" width="{{ image.width }}" height="{{ image.height }}" alt="" loading="lazy" decoding="async">
+                <figcaption>{{ image.alt }}</figcaption>
+              </figure>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+
+    <h2 id="local-video">Video</h2>
+    <div class="local-video">
+      {% if project.videos and project.videos.size > 0 %}
+        <div class="clip-list">
+          {% for clip in project.videos %}
+            <figure class="clip">
+              <video muted loop playsinline preload="none" controls loading="lazy" data-lazy poster="{{ clip.poster | relative_url }}" width="{{ clip.width }}" height="{{ clip.height }}">
+                <source src="{{ clip.src | relative_url }}" type="video/mp4">
+              </video>
+              <figcaption>{{ clip.caption }} <a href="{{ clip.url }}">Post on X</a></figcaption>
+            </figure>
+          {% endfor %}
+        </div>
+      {% elsif project.local_video and project.local_video != "" %}
+        <video controls preload="metadata" src="{{ project.local_video | relative_url }}"></video>
+      {% else %}
+        <p class="todo-block"><span class="todo-flag">TODO</span> Video: coming soon. Add a file at <code>{{ project.video_path }}</code> and set <code>local_video</code> for <code>{{ project.slug }}</code> in <code>_data/projects.yml</code>.</p>
+      {% endif %}
+    </div>
+
+    {% if project.x_posts %}
+      <h2>Posts on X</h2>
+      <div class="x-list">
+        <p class="source-note">Clips saved on this site are in the video section above, each linked to its post. Remaining posts are linked here, and a post that still has no local file is embedded from X.</p>
+        {% assign embed_count = 0 %}
+        {% for post in project.x_posts %}
+          {% if post.embed %}
+            {% assign embed_count = embed_count | plus: 1 %}
+            <blockquote class="twitter-tweet" data-dnt="true" data-conversation="none">
+              <a href="{{ post.url }}">{{ post.date }} — {{ post.note }} View on X.</a>
+            </blockquote>
+          {% else %}
+            <p><a href="{{ post.url }}">{{ post.date }} — {{ post.note }}</a></p>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% if embed_count > 0 %}
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      {% endif %}
+    {% endif %}
+
+    {% assign idx = nil %}
+    {% for item in projects %}
+      {% if item.slug == project.slug %}
+        {% assign idx = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+    {% assign prev_i = idx | minus: 1 %}
+    {% assign next_i = idx | plus: 1 %}
+    {% assign prev = nil %}
+    {% assign next = nil %}
+    {% for item in projects %}
+      {% if forloop.index0 == prev_i %}{% assign prev = item %}{% endif %}
+      {% if forloop.index0 == next_i %}{% assign next = item %}{% endif %}
+    {% endfor %}
+    <nav class="pager" aria-label="More projects">
+      {% if prev %}
+        <a href="{{ prev.slug | prepend: '/projects/' | append: '/' | relative_url }}">← {{ prev.title }}</a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      <a href="{{ '/projects/' | relative_url }}">All projects</a>
+      {% if next %}
+        <a href="{{ next.slug | prepend: '/projects/' | append: '/' | relative_url }}">{{ next.title }} →</a>
+      {% endif %}
+    </nav>
+  {% endunless %}
+</article>

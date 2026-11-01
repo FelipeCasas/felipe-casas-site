@@ -1,0 +1,30 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+description: Fifteen projects, from UHAS and grasp datasets to earlier mechatronics work.
+---
+<div class="wrap">
+  <header class="page-header">
+    <h1>Projects</h1>
+    <p class="lede">Fifteen projects. UHAS is first. Each page has paper and code links, or a visible placeholder, and a spot for a local video file.</p>
+  </header>
+  <ul class="chips">
+    {% for group in site.data.groups %}
+      <li><a href="#{{ group.id }}">{{ group.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% for group in site.data.groups %}
+    <section class="group" id="{{ group.id }}">
+      <h2>{{ group.title }}</h2>
+      <p>{{ group.summary }}</p>
+      <div class="cards">
+        {% for project in site.data.projects %}
+          {% if project.group == group.id %}
+            {% include project-card.html project=project %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</div>

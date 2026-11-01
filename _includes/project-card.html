@@ -1,0 +1,15 @@
+{% assign project = include.project %}
+<article class="card{% if project.slug == 'uhas' %} is-lead{% endif %}">
+  <a class="card-link" href="{{ project.slug | prepend: '/projects/' | append: '/' | relative_url }}">
+    {% if project.card_image %}
+      <img src="{{ project.card_image.src | relative_url }}" width="{{ project.card_image.width }}" height="{{ project.card_image.height }}" alt="" loading="lazy" decoding="async">
+    {% else %}
+      <div class="card-fallback" aria-hidden="true"><span>{{ project.card_label | default: project.kicker }}</span></div>
+    {% endif %}
+    <div class="card-body">
+      <p class="kicker">{{ project.kicker }}</p>
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.summary }}</p>
+    </div>
+  </a>
+</article>

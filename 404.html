@@ -1,0 +1,17 @@
+---
+layout: default
+title: Page not found
+permalink: /404.html
+description: That page is not on this site.
+---
+<div class="wrap">
+  <header class="page-header">
+    <h1>Page not found</h1>
+    <p class="lede">That address is not on this site.</p>
+  </header>
+  <ul class="link-row">
+    {% for item in site.data.profile.nav %}
+      <li><a href="{{ item.url | relative_url }}">{{ item.label }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

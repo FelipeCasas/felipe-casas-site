@@ -1,0 +1,100 @@
+# Site-wide identity. Edit this file for the name line, navigation, and contact links.
+name: Luis Felipe Casas Murillo
+short_name: Luis Felipe Casas
+role: PhD candidate, Computer Science, UT Dallas · Intelligent Robots and Vision Lab
+x: https://x.com/lfcasas7
+github: https://github.com/FelipeCasas
+lab_url: https://labs.utdallas.edu/irvl/
+lab_name: Intelligent Robots and Vision Lab (IRVL)
+advisor_name: Yu Xiang
+advisor_url: https://yuxng.github.io
+university_url: https://www.utdallas.edu/
+
+linkedin:
+  url: https://www.linkedin.com/in/luis-felipe-casas-murillo-011356158/
+
+email: lfcasas7@hotmail.com
+
+scholar: "https://scholar.google.com/citations?user=dieB8mMAAAAJ&hl=en&oi=sra"
+
+cv_pdf: /assets/cv/Luis-Felipe-Casas-CV.pdf
+
+# Unconfirmed headshot from the previous site's CV page.
+# The round image on the old home page is a GitHub icon, not a photo.
+portrait:
+  src: /assets/images/portrait-candidate.jpg
+  width: 600
+  height: 600
+  alt: Headshot of Luis Felipe Casas Murillo from the previous site's CV page.
+  confirmed: false
+
+nav:
+  - label: Home
+    url: /
+  - label: About
+    url: /about/
+  - label: Research
+    url: /research/
+  - label: Projects
+    url: /projects/
+  - label: Publications
+    url: /publications/
+  - label: Experience
+    url: /experience/
+  - label: News
+    url: /news/
+  - label: CV
+    url: /cv/
+
+interests:
+  - Dexterous manipulation
+  - Cross-embodiment learning
+  - Robotic grasping
+  - Reinforcement learning
+  - Zero-shot transfer
+  - Robot control
+
+bio:
+  - >-
+    Hello, I am Felipe, a Ph.D. student in Computer Science at The University
+    of Texas at Dallas. I work on intelligent robotics at the Intelligent
+    Robots and Vision Lab (IRVL). I have a master's degree in Robotic Systems
+    Engineering from RWTH Aachen University and a bachelor's degree in
+    Mechatronics Engineering from the Central American Technological University
+    (UNITEC). I received best-of-class acknowledgments from both my
+    mechatronics studies and my master's studies at RWTH Aachen. During my
+    bachelor's studies I worked as a laboratory aide, and after graduation I
+    worked as a mechatronics engineer. I did a master's internship at
+    Hexafarms in Germany and taught as a university lecturer at UNITEC. I have
+    had success in my academic and work because of discipline, excellence, and
+    patience. I believe these characteristics are crucial for enduring quality.
+  - >-
+    I am a broad-background researcher and engineer, with knowledge in
+    mechatronics, industrial automation, and current AI and robotics. I am a
+    motivated self-learner, with a principles-based approach and a
+    continuous-improvement mindset. I care about hard problems that benefit
+    society. I am fluent in Spanish and English, with basic proficiency in
+    German.
+  - >-
+    In 2026 I was first author of “Cross-Embodiment Robot Manipulation via a
+    Unified Hand Action Space” (UHAS), accepted and presented at the RSS 2026
+    Dexterous Manipulation Workshop. I received the Louis Beecherl, Jr.
+    Graduate Fellowship for 2025–2026. I was a Reinforcement Learning Engineer
+    intern at Persona AI in summer 2026. UHAS was discussed on RoboPapers,
+    episode 97.
+
+research:
+  - >-
+    I am part of the Intelligent Robots and Vision Lab at The University of
+    Texas at Dallas, where my research focuses on robotic manipulation,
+    particularly on developing solutions for robots to autonomously perform
+    tasks in real-world settings to assist humans. I hold the view that
+    achieving high skill levels in engineering demands hard work, and that
+    one's abilities are best demonstrated by overcoming challenges in projects.
+  - >-
+    The work covers dexterous manipulation, robotic control policies, grasping,
+    generative models, cross-embodiment learning, and zero-shot transfer. The
+    latest paper, UHAS, trains one reinforcement-learning policy in a shared
+    hand action space and maps it onto different hands. It was accepted and
+    presented at the 4th Workshop on Dexterous Manipulation at Robotics:
+    Science and Systems (RSS), 2026.

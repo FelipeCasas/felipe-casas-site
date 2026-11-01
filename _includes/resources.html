@@ -1,0 +1,18 @@
+<ul class="resources">
+  {% for item in include.items %}
+    <li>
+      {% if item.status == "ok" %}
+        <a href="{{ item.url }}">{{ item.label }}</a>
+      {% elsif item.status == "na" %}
+        <span class="resource is-na">{{ item.label }}: not applicable</span>
+      {% else %}
+        <span class="resource is-todo"><span class="todo-flag">TODO</span> {{ item.label }}: coming soon{% if item.note %} — {{ item.note }}{% endif %}</span>
+      {% endif %}
+    </li>
+  {% endfor %}
+  {% if include.show_video %}
+    <li><a href="#local-video">Video</a></li>
+  {% else %}
+    <li><span class="resource is-todo"><span class="todo-flag">TODO</span> Video: coming soon</span></li>
+  {% endif %}
+</ul>

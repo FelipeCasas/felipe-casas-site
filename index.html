@@ -1,0 +1,90 @@
+---
+layout: default
+title: Home
+description: >-
+  Luis Felipe Casas Murillo, PhD candidate in Computer Science at UT Dallas
+  (IRVL). Dexterous manipulation, cross-embodiment learning, and robotic grasping.
+---
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Intelligent Robots and Vision Lab · UT Dallas</p>
+      <h1>{{ site.data.profile.name }}</h1>
+      <p class="role">PhD candidate, Computer Science, UT Dallas<br>Intelligent Robots and Vision Lab</p>
+      <p>Advisor: <a href="{{ site.data.profile.advisor_url }}">{{ site.data.profile.advisor_name }}</a>. Lab: <a href="{{ site.data.profile.lab_url }}">{{ site.data.profile.lab_name }}</a>.</p>
+      <ul class="chips">
+        {% for interest in site.data.profile.interests %}
+          <li>{{ interest }}</li>
+        {% endfor %}
+      </ul>
+      <ul class="link-row">
+        <li><a rel="me" href="{{ site.data.profile.scholar | escape }}">Google Scholar</a></li>
+        <li><a rel="me" href="{{ site.data.profile.github }}">GitHub</a></li>
+        <li><a rel="me" href="{{ site.data.profile.x }}">X</a></li>
+        <li><a rel="me" href="{{ site.data.profile.linkedin.url }}">LinkedIn</a></li>
+        <li><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></li>
+        <li><a class="button primary" href="{{ site.data.profile.cv_pdf | relative_url }}" download>CV</a></li>
+      </ul>
+    </div>
+    <aside class="hero-aside">
+      <figure class="portrait">
+        <img src="{{ site.data.profile.portrait.src | relative_url }}" width="{{ site.data.profile.portrait.width }}" height="{{ site.data.profile.portrait.height }}" alt="{{ site.data.profile.portrait.alt }}">
+        <figcaption class="todo-block"><span class="todo-flag">TODO</span> Confirm this portrait or replace <code>assets/images/portrait-candidate.jpg</code>.</figcaption>
+      </figure>
+    </aside>
+  </section>
+
+  {% assign uhas = site.data.projects | where: "slug", "uhas" | first %}
+  {% assign hero_clip = uhas.videos | first %}
+  <section class="paper-banner uhas-hero" aria-labelledby="uhas-banner">
+    <div>
+      <p class="kicker" id="uhas-banner">Latest paper</p>
+      <h2>Cross-Embodiment Robot Manipulation via a Unified Hand Action Space</h2>
+      <p>UHAS was accepted and presented at the RSS 2026 Dexterous Manipulation Workshop. One policy drives different dexterous hands through a shared spherical action space and Cascade Inverse Kinematics.</p>
+      <ul class="link-row">
+        <li><a href="https://arxiv.org/abs/2607.03570">Paper</a></li>
+        <li><a href="https://irvlutd.github.io/UHAS/">Project page</a></li>
+        <li><a href="https://github.com/IRVLUTD/UHAS_sim">Code</a></li>
+        <li><a href="{{ hero_clip.url }}">Thread on X</a></li>
+        <li><a href="{{ '/projects/uhas/' | relative_url }}">On this site</a></li>
+      </ul>
+    </div>
+    <figure class="clip">
+      <video muted loop playsinline autoplay preload="metadata" poster="{{ hero_clip.poster | relative_url }}" width="{{ hero_clip.width }}" height="{{ hero_clip.height }}">
+        <source src="{{ hero_clip.src | relative_url }}" type="video/mp4">
+      </video>
+      <figcaption>{{ hero_clip.caption }} <a href="{{ hero_clip.url }}">Post on X</a></figcaption>
+    </figure>
+  </section>
+
+  <div class="section-head">
+    <h2>Featured projects</h2>
+    <a href="{{ '/projects/' | relative_url }}">All projects</a>
+  </div>
+  <div class="cards">
+    {% for project in site.data.projects %}
+      {% if project.featured %}
+        {% include project-card.html project=project %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="section-head">
+    <h2>News</h2>
+    <a href="{{ '/news/' | relative_url }}">All news and talks</a>
+  </div>
+  <ol class="news-list">
+    {% for item in site.data.news limit: 5 %}
+      <li>
+        <time datetime="{{ item.date }}">{{ item.display }}</time>
+        <div>
+          <strong>{{ item.title }}</strong>
+          <p>{{ item.text }}</p>
+          {% if item.youtube %}<a href="{{ item.youtube }}">Episode</a>{% endif %}
+          {% if item.url %}{% if item.youtube %} · {% endif %}<a href="{{ item.url }}">Post</a>{% endif %}
+          {% if item.project %} · <a href="{{ item.project | prepend: '/projects/' | append: '/' | relative_url }}">Project</a>{% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</div>

@@ -1,0 +1,38 @@
+# Jekyll site for GitHub Pages (project site).
+# After merge, Pages will build this with its own Jekyll. Do not add a .nojekyll file.
+# If you later publish at the domain root (username.github.io), set baseurl to "".
+title: Luis Felipe Casas Murillo
+description: >-
+  PhD candidate in Computer Science at The University of Texas at Dallas,
+  Intelligent Robots and Vision Lab. Research on dexterous manipulation,
+  cross-embodiment learning, and robotic grasping.
+url: "https://felipecasas.github.io"
+baseurl: "/felipe-casas-site"
+lang: en
+timezone: America/Chicago
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+permalink: pretty
+exclude:
+  - README.md
+  - script
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - .gitignore
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      type: projects
+    values:
+      layout: project

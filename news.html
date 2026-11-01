@@ -1,0 +1,58 @@
+---
+layout: default
+title: News and talks
+permalink: /news/
+description: News, talks, and a pointer to honors.
+---
+<div class="wrap">
+  <header class="page-header">
+    <h1>News and talks</h1>
+    <p class="lede">Dated notes from public posts and the CV. Honors are collected on the <a href="{{ '/about/#honors' | relative_url }}">about page</a>.</p>
+  </header>
+
+  <section id="news">
+    <h2>News</h2>
+    <ol class="news-list">
+      {% for item in site.data.news %}
+        <li>
+          <time datetime="{{ item.date }}">{{ item.display }}</time>
+          <div>
+            <strong>{{ item.title }}</strong>
+            <p>{{ item.text }}</p>
+            {% if item.youtube_embed %}
+              <div class="video-frame">
+                <iframe src="{{ item.youtube_embed }}" title="{{ item.title }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            {% endif %}
+            {% if item.todo %}<p class="todo-block"><span class="todo-flag">TODO</span> {{ item.todo }}</p>{% endif %}
+            {% if item.youtube %}<a href="{{ item.youtube }}">Watch</a>{% endif %}
+            {% if item.url %}{% if item.youtube %} · {% endif %}<a href="{{ item.url }}">Post</a>{% endif %}
+            {% if item.project %} · <a href="{{ item.project | prepend: '/projects/' | append: '/' | relative_url }}">Project</a>{% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section id="talks">
+    <h2>Talks</h2>
+    {% for talk in site.data.talks %}
+      <article class="pub">
+        <p class="kicker">{{ talk.date }}</p>
+        <h3>{{ talk.title }}</h3>
+        <p>{{ talk.event }}</p>
+        {% if talk.note %}<p>{{ talk.note }}</p>{% endif %}
+        {% if talk.youtube_embed %}
+          <div class="video-frame">
+            <iframe src="{{ talk.youtube_embed }}" title="{{ talk.title }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        {% endif %}
+        {% if talk.todo %}<p class="todo-block"><span class="todo-flag">TODO</span> {{ talk.todo }}</p>{% endif %}
+        <ul class="link-row">
+          {% if talk.url %}<li><a href="{{ talk.url }}">{% if talk.youtube_embed %}Watch{% else %}Event{% endif %}</a></li>{% endif %}
+          {% if talk.post %}<li><a href="{{ talk.post }}">Post on X</a></li>{% endif %}
+        </ul>
+      </article>
+    {% endfor %}
+  </section>
+</div>
