@@ -79,7 +79,9 @@ layout: default
       <h2>Figures</h2>
       <ul class="gallery">
         {% for image in project.images %}
-          <li{% if image.wide %} class="wide"{% endif %}>
+          {% capture item_class %}{% if image.wide %}wide{% endif %}{% if image.pad %} pad{% endif %}{% endcapture %}
+          {% assign item_class = item_class | strip %}
+          <li{% if item_class != "" %} class="{{ item_class }}"{% endif %}>
             <figure>
               <img src="{{ image.src | relative_url }}" width="{{ image.width }}" height="{{ image.height }}" alt="" loading="lazy" decoding="async">
               <figcaption>{{ image.alt }}</figcaption>

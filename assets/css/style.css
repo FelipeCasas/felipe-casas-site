@@ -506,10 +506,24 @@ blockquote.twitter-tweet {
   overflow: hidden;
 }
 
+/* Light mat so white paper figures stay distinct on the tinted page. */
+.gallery .pad img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0.85rem 1rem;
+  background: #f4f6f8;
+}
+
 .gallery figcaption {
   padding: 0.55rem 0.75rem 0.7rem;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.gallery .pad figcaption {
+  padding: 0.65rem 1rem 0.9rem;
+  line-height: 1.45;
 }
 
 .local-video, .x-list { padding: 1rem; }
