@@ -1,5 +1,7 @@
 # Luis Felipe Casas Murillo
 
+**Live website:** https://felipecasas.github.io/felipe-casas-site/
+
 Personal academic site for GitHub Pages. Jekyll builds it. Content lives in `_data/` as YAML, so a new paper is one entry in `_data/publications.yml` and a new project is one entry in `_data/projects.yml` plus a short stub.
 
 ## Pages
