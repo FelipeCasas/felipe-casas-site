@@ -55,6 +55,32 @@
       height: 1080
       caption: Wuji Hand added to the training set.
       url: https://x.com/lfcasas7/status/2075980423562236173
+  images:
+    - src: /assets/images/uhas/fig1_overview.png
+      width: 6219
+      height: 1461
+      wide: true
+      pad: true
+      alt: >-
+        Figure 1. Unified hand action space overview: an action is represented
+        as the deformation of a canonical sphere and mapped via Cascade IK to
+        LEAP, Allegro, MANO, and Shadow hands.
+    - src: /assets/images/uhas/fig3_sphere_correspondence.png
+      width: 6316
+      height: 1400
+      wide: true
+      pad: true
+      alt: >-
+        Figure 3. Construction of the unified hand surface correspondence
+        across hand poses.
+    - src: /assets/images/uhas/fig7_real_world_results.png
+      width: 7221
+      height: 1410
+      wide: true
+      pad: true
+      alt: >-
+        Figure 7. Real-world deployment of a UHAS policy for in-hand cube
+        reorientation on the LEAP hand.
   role: >-
     First author of the workshop paper and of the project release. I announced
     the method, the RSS 2026 presentation, the Wuji Hand addition, and the
