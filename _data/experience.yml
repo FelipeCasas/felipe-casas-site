@@ -19,6 +19,7 @@
   org_url: https://labs.utdallas.edu/irvl/
   location: Richardson, TX
   dates: Aug. 2023 – present
+  advisor: true
   bullets:
     - Research on dexterous manipulation, robotic control policies, grasping, generative models, cross-embodiment learning, and zero-shot transfer.
     - "First author of UHAS, presented at the RSS 2026 Dexterous Manipulation Workshop."

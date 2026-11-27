@@ -12,6 +12,7 @@
         <li><a rel="me" href="{{ site.data.profile.linkedin.url }}">LinkedIn</a></li>
         <li><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></li>
         <li><a href="{{ site.data.profile.lab_url }}">IRVL</a></li>
+        <li>PhD advisor: <a href="{{ site.data.profile.advisor_url }}">{{ site.data.profile.advisor_name }}</a> ({{ site.data.profile.advisor_affiliation }})</li>
         <li><a href="{{ site.data.profile.cv_pdf | relative_url }}" download>CV (PDF)</a></li>
       </ul>
       <p class="fine">© {{ 'now' | date: '%Y' }} {{ site.data.profile.name }}. Built with <a href="https://pages.github.com/">GitHub Pages</a>.</p>

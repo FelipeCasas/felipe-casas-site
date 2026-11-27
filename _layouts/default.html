@@ -32,6 +32,7 @@
   <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% assign person = site.data.profile %}
+  {% capture person_desc %}PhD candidate in Computer Science at The University of Texas at Dallas. PhD advisor: {{ person.advisor_name }} ({{ person.advisor_affiliation }}).{% endcapture %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,6 +41,7 @@
     "url": {{ "/" | absolute_url | jsonify }},
     "email": {{ person.email | jsonify }},
     "jobTitle": "PhD candidate",
+    "description": {{ person_desc | jsonify }},
     "affiliation": {
       "@type": "CollegeOrUniversity",
       "name": "The University of Texas at Dallas",

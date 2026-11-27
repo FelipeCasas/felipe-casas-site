@@ -2,7 +2,7 @@
 layout: default
 title: Experience
 permalink: /experience/
-description: Research, industry, teaching, and volunteer roles.
+description: Research, industry, teaching, and volunteer roles. PhD research at IRVL is advised by Prof. Yu Xiang.
 ---
 <div class="wrap">
   <header class="page-header">
@@ -20,6 +20,9 @@ description: Research, industry, teaching, and volunteer roles.
             {% if job.org_url %}<a href="{{ job.org_url }}">{{ job.org }}</a>{% else %}{{ job.org }}{% endif %}
             {% if job.location %} · {{ job.location }}{% endif %}
           </p>
+          {% if job.advisor %}
+            <p>PhD advisor: <a href="{{ site.data.profile.advisor_url }}">{{ site.data.profile.advisor_name }}</a> ({{ site.data.profile.advisor_affiliation }}).</p>
+          {% endif %}
           {% if job.dates_todo %}
             <p class="todo-block"><span class="todo-flag">TODO</span> {{ job.dates_todo }}</p>
           {% elsif job.dates %}

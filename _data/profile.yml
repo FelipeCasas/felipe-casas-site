@@ -6,8 +6,9 @@ x: https://x.com/lfcasas7
 github: https://github.com/FelipeCasas
 lab_url: https://labs.utdallas.edu/irvl/
 lab_name: Intelligent Robots and Vision Lab (IRVL)
-advisor_name: Yu Xiang
+advisor_name: Prof. Yu Xiang
 advisor_url: https://yuxng.github.io
+advisor_affiliation: IRVL, UT Dallas
 university_url: https://www.utdallas.edu/
 
 linkedin:
@@ -58,7 +59,8 @@ bio:
   - >-
     Hello, I am Felipe, a Ph.D. student in Computer Science at The University
     of Texas at Dallas. I work on intelligent robotics at the Intelligent
-    Robots and Vision Lab (IRVL). I have a master's degree in Robotic Systems
+    Robots and Vision Lab (IRVL), advised by Prof. Yu Xiang. I have a master's
+    degree in Robotic Systems
     Engineering from RWTH Aachen University and a bachelor's degree in
     Mechatronics Engineering from the Central American Technological University
     (UNITEC). I received best-of-class acknowledgments from both my
@@ -86,8 +88,9 @@ bio:
 research:
   - >-
     I am part of the Intelligent Robots and Vision Lab at The University of
-    Texas at Dallas, where my research focuses on robotic manipulation,
-    particularly on developing solutions for robots to autonomously perform
+    Texas at Dallas, advised by Prof. Yu Xiang. My research focuses on
+    robotic manipulation, particularly on developing solutions for robots to
+    autonomously perform
     tasks in real-world settings to assist humans. I hold the view that
     achieving high skill levels in engineering demands hard work, and that
     one's abilities are best demonstrated by overcoming challenges in projects.
