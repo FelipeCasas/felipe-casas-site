@@ -24,7 +24,7 @@ Home, About, Research, Projects (15 project pages), Publications, Experience, Ne
 
 Adding a project:
 
-1. Add an entry to `_data/projects.yml`. Set `slug`, and set `local_video: ""` until a file exists.
+1. Add an entry to `_data/projects.yml`. Set `slug`. Leave the video path in a YAML comment until a file exists.
 2. Create `_projects/<slug>.md` with only:
 
 ```yaml
@@ -36,7 +36,7 @@ slug: your-slug
 3. Put figures in `assets/images/opt/` and list them on the entry.
 4. For a local video, save `assets/videos/<slug>.mp4` and set `local_video` to `/assets/videos/<slug>.mp4`.
 
-Paper and code links use `status: ok` with a `url`, `status: todo` (renders as “Paper: coming soon” or “Code: coming soon”), or `status: na` (“not applicable”). Every project page also reserves a video slot.
+A paper or code link is shown only with `status: ok` and a `url`. A video block is shown only when `local_video` or `videos` points at a file.
 
 Originals downloaded from the previous Wix site are in `assets/images/wix/`. Pages use the resized files in `assets/images/opt/`.
 
@@ -62,12 +62,8 @@ Do this in the GitHub repository settings. This pull request does not change tho
 5. The site will be at `https://felipecasas.github.io/felipe-casas-site/`.
 6. If you later move the site to `https://felipecasas.github.io/` (a user site) or a custom domain at the root, set `baseurl` in `_config.yml` to `""` and update the Sitemap line in `robots.txt`.
 
-## Placeholders
+## Unpublished files
 
-Search the data files for `TODO`. The visible ones are:
-
-- Whether Frontier Mining can be described in public
-- A local video file on every project except UHAS, which has five clips in `assets/videos/uhas/`
-- Ale-HAND-Ra figures and a longer role note
+UHAS has five clips in `assets/videos/uhas/`. Other projects keep an expected video path in a YAML comment and do not show a video block. Ale-HAND-Ra figures and a longer Frontier Mining description are also only in YAML comments.
 
 Already filled in: email `lfcasas7@hotmail.com`, LinkedIn `https://www.linkedin.com/in/luis-felipe-casas-murillo-011356158/`, Google Scholar `https://scholar.google.com/citations?user=dieB8mMAAAAJ&hl=en&oi=sra`, CV PDF at `assets/cv/Luis-Felipe-Casas-CV.pdf`, the current portrait, the Persona AI internship (May 2026 – August 2026), RoboPapers episode 97 at `https://www.youtube.com/watch?v=RfxFs0vEzs0`, Ph.D. start August 2023, and M.Sc. end November 2022.

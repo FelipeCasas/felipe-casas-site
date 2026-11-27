@@ -2,10 +2,10 @@ languages:
   - name: Spanish
     level: Mother tongue
   - name: English
-    level: Fluent (bilingual on the previous site)
+    level: Fluent
   - name: German
-    level: Basic proficiency on the CV
-    note: The previous site lists German at B1. The CV says basic proficiency.
+    # The previous site lists German at B1. The CV says basic proficiency.
+    level: Basic proficiency
 
 groups:
   - title: Robotic manipulation, modeling, and control

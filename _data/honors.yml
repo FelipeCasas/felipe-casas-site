@@ -39,7 +39,8 @@ full:
   - date: July 2021
     text: Best of Class for three semesters of Robotic Systems Engineering, RWTH Aachen University.
   - date: May 2023
-    text: "Recognition for International Engineering Week, UNITEC. CV title: “Artificial Intelligence Applied to Flexible Manufacturing Workshops.” The previous site phrases the talk as “Artificial Intelligence applied in Flexible Assembly Shops.”"
+    # The previous site phrases this talk as “Artificial Intelligence applied in Flexible Assembly Shops.”
+    text: "Recognition for International Engineering Week, UNITEC: Artificial Intelligence Applied to Flexible Manufacturing Workshops."
   - date: 2025–2026
     text: Louis Beecherl, Jr. Graduate Fellowship, Erik Jonsson School of Engineering and Computer Science, UT Dallas. Announced publicly on February 14, 2026.
     url: https://x.com/lfcasas7/status/2022513869076193385

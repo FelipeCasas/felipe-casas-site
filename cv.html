@@ -16,8 +16,6 @@ description: Curriculum vitae for Luis Felipe Casas Murillo, PhD candidate at UT
     <object data="{{ site.data.profile.cv_pdf | relative_url }}" type="application/pdf" width="100%" height="820" aria-label="Curriculum vitae PDF">
       <p>The PDF viewer is unavailable. Use the download link.</p>
     </object>
-  {% else %}
-    <p class="todo-block"><span class="todo-flag">TODO</span> CV PDF: coming soon. Export the LaTeX CV, remove the phone number, and save it as <code>{{ site.data.profile.cv_pdf_expected }}</code>. Then set <code>cv_pdf</code> in <code>_data/profile.yml</code> to that path.</p>
   {% endif %}
 
   <h2>HTML version</h2>

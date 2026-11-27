@@ -23,17 +23,8 @@ description: Research, industry, teaching, and volunteer roles. PhD research at 
           {% if job.advisor %}
             <p>PhD advisor: <a href="{{ site.data.profile.advisor_url }}">{{ site.data.profile.advisor_name }}</a> ({{ site.data.profile.advisor_affiliation }}).</p>
           {% endif %}
-          {% if job.dates_todo %}
-            <p class="todo-block"><span class="todo-flag">TODO</span> {{ job.dates_todo }}</p>
-          {% elsif job.dates %}
+          {% if job.dates %}
             <p>{{ job.dates }}</p>
-          {% endif %}
-          {% if job.location_todo %}
-            <p class="todo-block"><span class="todo-flag">TODO</span> {{ job.location_todo }}</p>
-          {% endif %}
-          {% if job.note %}<p class="source-note">{{ job.note }}</p>{% endif %}
-          {% if job.bullets_todo %}
-            <p class="todo-block"><span class="todo-flag">TODO</span> {{ job.bullets_todo }}</p>
           {% endif %}
           {% if job.bullets %}
             <ul class="clean">

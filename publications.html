@@ -29,9 +29,6 @@ description: Papers and workshop papers, with links and BibTeX.
         {% if pub.project %}
           <li><a href="{{ pub.project | prepend: '/projects/' | append: '/' | relative_url }}">Project write-up</a></li>
         {% endif %}
-        {% if pub.code_todo %}
-          <li><span class="resource is-todo"><span class="todo-flag">TODO</span> Code: coming soon — {{ pub.code_todo }}</span></li>
-        {% endif %}
       </ul>
       <details>
         <summary>BibTeX</summary>
