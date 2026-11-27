@@ -24,8 +24,9 @@ groups:
   - title: Frameworks and tools
     items:
       - PyTorch, JAX, and TensorFlow/Keras
-      - Isaac Sim and Isaac Lab 6.2+
-      - Newton
+      - Isaac Sim 6.2
+      - Isaac Lab 3.0
+      - Newton 1.6.1
       - MuJoCo, Gazebo, and Unity ML-Agents
       - ROS and ROS 2
       - Docker

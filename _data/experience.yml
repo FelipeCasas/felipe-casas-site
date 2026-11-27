@@ -3,10 +3,9 @@
   role: Reinforcement Learning Engineer
   kind: Summer internship
   org: Persona AI
-  dates: Summer 2026
+  dates: May 2026 – August 2026
   bullets:
-    - Built robotic grasping reinforcement-learning environments with the latest Isaac Lab develop versions.
-    - Worked with Newton and dexterous grasping.
+    - Built robotic grasping reinforcement-learning environments using Isaac Lab develop versions (Newton), including dexterous grasping.
   links:
     - label: Note on X
       url: https://x.com/lfcasas7/status/2092338679196917789

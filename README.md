@@ -70,4 +70,4 @@ Search the data files for `TODO`. The visible ones are:
 - A local video file on every project except UHAS, which has five clips in `assets/videos/uhas/`
 - Ale-HAND-Ra figures and a longer role note
 
-Already filled in: email `lfcasas7@hotmail.com`, LinkedIn `https://www.linkedin.com/in/luis-felipe-casas-murillo-011356158/`, Google Scholar `https://scholar.google.com/citations?user=dieB8mMAAAAJ&hl=en&oi=sra`, CV PDF at `assets/cv/Luis-Felipe-Casas-CV.pdf`, the current portrait, the Summer 2026 Persona AI internship, RoboPapers episode 97 at `https://www.youtube.com/watch?v=RfxFs0vEzs0`, Ph.D. start August 2023, and M.Sc. end November 2022.
+Already filled in: email `lfcasas7@hotmail.com`, LinkedIn `https://www.linkedin.com/in/luis-felipe-casas-murillo-011356158/`, Google Scholar `https://scholar.google.com/citations?user=dieB8mMAAAAJ&hl=en&oi=sra`, CV PDF at `assets/cv/Luis-Felipe-Casas-CV.pdf`, the current portrait, the Persona AI internship (May 2026 – August 2026), RoboPapers episode 97 at `https://www.youtube.com/watch?v=RfxFs0vEzs0`, Ph.D. start August 2023, and M.Sc. end November 2022.
