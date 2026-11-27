@@ -443,9 +443,6 @@
     - label: Paper
       status: ok
       url: https://doi.org/10.4028/p-wzT8b4
-    - label: Code
-      status: todo
-      note: no public repository is known
 
 - slug: frontier-mining
   title: Frontier Mining hardware collaboration
@@ -470,12 +467,7 @@
       description. Nothing here adds to it.
   images_todo: >-
     Add figures only if the collaboration can be shown. It may be confidential.
-  links:
-    - label: Paper
-      status: na
-    - label: Code
-      status: todo
-      note: confirm whether any code or hardware detail can be public; it may be confidential
+  links: []
 
 - slug: renal-analysis
   title: Automated renal analysis
@@ -548,9 +540,6 @@
     - label: PubMed
       status: ok
       url: https://pubmed.ncbi.nlm.nih.gov/38585207/
-    - label: Code
-      status: todo
-      note: no public repository is known
   card_image:
     src: /assets/images/opt/renal-overlay.jpg
     width: 622
@@ -627,9 +616,6 @@
     - label: Paper
       status: ok
       url: https://doi.org/10.1007/978-3-031-44505-7_25
-    - label: Code
-      status: todo
-      note: no public repository is known
   card_image:
     src: /assets/images/opt/thesis-layout.jpg
     width: 889
@@ -685,12 +671,6 @@
       Yield-prediction models from the same internship are listed on the
       experience page rather than here.
   links:
-    - label: Paper
-      status: todo
-      note: industry project; no paper is known
-    - label: Code
-      status: todo
-      note: no public repository is known
     - label: Hexafarms
       status: ok
       url: https://www.hexafarms.com
@@ -750,13 +730,7 @@
       application for live monitoring and alerts. The emphasis was embedded
       systems, wireless sensor networks, network management, and system
       testing and deployment.
-  links:
-    - label: Paper
-      status: todo
-      note: thesis PDF link is not on the previous site
-    - label: Code
-      status: todo
-      note: no public repository is known
+  links: []
   card_image:
     src: /assets/images/opt/wildfire-node-forest.jpg
     width: 348
@@ -850,12 +824,7 @@
     - >-
       Computer-assisted manufacturing project using CNC machines and 3D
       printers, including a 3D-printed robotic arm.
-  links:
-    - label: Paper
-      status: na
-    - label: Code
-      status: todo
-      note: no repository was published with the project
+  links: []
   card_image:
     src: /assets/images/opt/cam-arm-1.jpg
     width: 799

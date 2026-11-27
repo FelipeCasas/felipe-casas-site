@@ -20,14 +20,11 @@ scholar: "https://scholar.google.com/citations?user=dieB8mMAAAAJ&hl=en&oi=sra"
 
 cv_pdf: /assets/cv/Luis-Felipe-Casas-CV.pdf
 
-# Unconfirmed headshot from the previous site's CV page.
-# The round image on the old home page is a GitHub icon, not a photo.
 portrait:
   src: /assets/images/portrait-candidate.jpg
   width: 600
   height: 600
-  alt: Headshot of Luis Felipe Casas Murillo from the previous site's CV page.
-  confirmed: false
+  alt: Headshot of Luis Felipe Casas Murillo.
 
 nav:
   - label: Home

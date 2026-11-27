@@ -66,11 +66,8 @@ Do this in the GitHub repository settings. This pull request does not change tho
 
 Search the data files for `TODO`. The visible ones are:
 
-- Portrait photo (`assets/images/portrait-candidate.jpg` is unconfirmed)
-- Persona AI internship dates, location, and bullets
-- Missing paper or code links, marked “coming soon”, on Ale-HAND-Ra, Frontier Mining, renal analysis, the digital-twin thesis, vertical farms, the wildfire thesis, and the CAM project
 - Whether Frontier Mining can be described in public
 - A local video file on every project except UHAS, which has five clips in `assets/videos/uhas/`
 - Ale-HAND-Ra figures and a longer role note
 
-Already filled in: email `lfcasas7@hotmail.com`, LinkedIn `https://www.linkedin.com/in/luis-felipe-casas-murillo-011356158/`, Google Scholar `https://scholar.google.com/citations?user=dieB8mMAAAAJ&hl=en&oi=sra`, CV PDF at `assets/cv/Luis-Felipe-Casas-CV.pdf`, RoboPapers episode 97 at `https://www.youtube.com/watch?v=RfxFs0vEzs0`, Ph.D. start August 2023, and M.Sc. end November 2022.
+Already filled in: email `lfcasas7@hotmail.com`, LinkedIn `https://www.linkedin.com/in/luis-felipe-casas-murillo-011356158/`, Google Scholar `https://scholar.google.com/citations?user=dieB8mMAAAAJ&hl=en&oi=sra`, CV PDF at `assets/cv/Luis-Felipe-Casas-CV.pdf`, the current portrait, the Summer 2026 Persona AI internship, RoboPapers episode 97 at `https://www.youtube.com/watch?v=RfxFs0vEzs0`, Ph.D. start August 2023, and M.Sc. end November 2022.

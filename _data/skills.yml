@@ -18,14 +18,18 @@ groups:
   - title: Machine learning
     items:
       - Generative models
+      - Distillation
       - 3D reconstruction, photogrammetry, and image processing
       - Deep learning and controls-oriented modeling
   - title: Frameworks and tools
     items:
       - PyTorch, JAX, and TensorFlow/Keras
-      - Isaac Sim and Isaac Lab
-      - ROS and ROS 2
+      - Isaac Sim and Isaac Lab 6.2+
+      - Newton
       - MuJoCo, Gazebo, and Unity ML-Agents
+      - ROS and ROS 2
+      - Docker
+      - Agentic programming
       - MATLAB, Simulink, and Git
   - title: Hardware, software, and automation
     items:
