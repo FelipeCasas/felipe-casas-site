@@ -5,10 +5,10 @@
 #      slug: your-slug
 #      ---
 # 3. Optional figures go in assets/images/opt/.
-# 4. Optional video: save assets/videos/<slug>.mp4 and set local_video to that path.
-# Paper, code, and video use status ok | todo | na.
-# todo renders as "Paper: coming soon" / "Code: coming soon".
-# The video row is always shown from local_video / video_path.
+# 4. For a local video, save the file and set local_video to its site path.
+# A video block is rendered only when local_video or videos is set.
+# Until a file exists, keep the path in a comment on the entry.
+# A paper or code row is rendered only when status is ok and url is set.
 
 - slug: uhas
   title: "UHAS: Unified Hand Action Space"
@@ -167,8 +167,7 @@
   location: Dallas, TX
   project_type: Robotic grasping
   publication: robotfingerprint
-  local_video: ""
-  video_path: assets/videos/robotfingerprint.mp4
+  # Expected local video when a file is added: assets/videos/robotfingerprint.mp4
   role: Co-author. I presented the poster at TEROS 2026.
   paragraphs:
     - >-
@@ -238,8 +237,7 @@
   location: University of Texas at Dallas
   project_type: Intelligent robotics, robotic grasping
   publication: multigrippergrasp
-  local_video: ""
-  video_path: assets/videos/multigrippergrasp.mp4
+  # Expected local video when a file is added: assets/videos/multigrippergrasp.mp4
   role: Co-first author with Ninad Khargonkar (equal contribution).
   paragraphs:
     - >-
@@ -313,8 +311,7 @@
   location: University of Texas at Dallas
   project_type: Simulation toolkit
   publication: multigrippergrasp
-  local_video: ""
-  video_path: assets/videos/multigrippergrasp-toolkit.mp4
+  # Expected local video when a file is added: assets/videos/multigrippergrasp-toolkit.mp4
   role: >-
     I announced the Toolkit 2.0 release. The code is in the IRVLUTD
     isaac_sim_grasping repository.
@@ -356,8 +353,7 @@
   date_display: May 8, 2025
   location: University of Texas at Dallas
   project_type: ROS package
-  local_video: ""
-  video_path: assets/videos/leap-inhand.mp4
+  # Expected local video when a file is added: assets/videos/leap-inhand.mp4
   role: >-
     I announced the package. The code is released under the IRVLUTD
     organization as leap_inhand.
@@ -369,8 +365,6 @@
       and effort. There is no separate paper. The package was announced on
       May 8, 2025.
   links:
-    - label: Paper
-      status: na
     - label: Code
       status: ok
       url: https://github.com/IRVLUTD/leap_inhand
@@ -392,8 +386,7 @@
   date_display: March 4, 2025
   location: University of Texas at Dallas
   project_type: ROS package
-  local_video: ""
-  video_path: assets/videos/fetch-netft.mp4
+  # Expected local video when a file is added: assets/videos/fetch-netft.mp4
   role: >-
     I announced the package. It lives in the IRVLUTD fetch_ros_IRVL
     repository.
@@ -403,8 +396,6 @@
       the Fetch robot as a WrenchStamped topic. It is part of fetch_ros_IRVL.
       There is no separate paper. The package was announced on March 4, 2025.
   links:
-    - label: Paper
-      status: na
     - label: Code
       status: ok
       url: https://github.com/IRVLUTD/fetch_ros_IRVL
@@ -426,32 +417,22 @@
   date_display: "2026"
   project_type: Robot hardware
   publication: ale-hand-ra
-  local_video: ""
-  video_path: assets/videos/ale-hand-ra.mp4
+  # Expected local video when a file is added: assets/videos/ale-hand-ra.mp4
   role: Co-author, with Hillary Velásquez, Marcela Lagos, and Fávell Núñez.
-  role_todo: >-
-    Add a longer note on your part of the design if you want it public.
+  # A longer note on the design, and photographs, are not on the public page yet.
   paragraphs:
     - >-
       Ale-HAND-Ra is a low-cost, open-source humanoid robotic hand, published
-      in Materials Science Forum in 2026. This site only has the citation so
-      far. The previous site and the public posts do not describe the mechanism
-      or link to code, and they do not include figures.
-  images_todo: >-
-    Add photographs or figures of Ale-HAND-Ra, if they can be shared.
+      in Materials Science Forum in 2026.
   links:
     - label: Paper
       status: ok
       url: https://doi.org/10.4028/p-wzT8b4
-    - label: Code
-      status: todo
-      note: no public repository is known
 
 - slug: frontier-mining
   title: Frontier Mining hardware collaboration
   summary: >-
-    Ongoing industry collaboration on novel robot hardware design, named on
-    the CV. Public details are not available yet.
+    Industry collaboration on novel robot hardware design.
   kicker: Ongoing
   card_label: Frontier
   featured: false
@@ -459,23 +440,14 @@
   date_display: Ongoing during the Ph.D.
   location: With UT Dallas
   project_type: Industry collaboration
-  local_video: ""
-  video_path: assets/videos/frontier-mining.mp4
-  role: Named on the CV as current Ph.D. work.
-  role_todo: Confirm a public one-line description of your role.
+  # Expected local video when a file is added: assets/videos/frontier-mining.mp4
+  role: Hardware design collaboration during the Ph.D.
+  # A longer role note and figures are not on the public page.
   paragraphs:
     - >-
-      The CV lists, under current projects, an industry collaboration on novel
-      robot hardware design for Frontier Mining. That is the only public
-      description. Nothing here adds to it.
-  images_todo: >-
-    Add figures only if the collaboration can be shown. It may be confidential.
-  links:
-    - label: Paper
-      status: na
-    - label: Code
-      status: todo
-      note: confirm whether any code or hardware detail can be public; it may be confidential
+      Ongoing industry collaboration on novel robot hardware design for
+      Frontier Mining.
+  links: []
 
 - slug: renal-analysis
   title: Automated renal analysis
@@ -490,8 +462,7 @@
   location: Aachen, Germany
   project_type: Computer vision
   publication: renal
-  local_video: ""
-  video_path: assets/videos/renal-analysis.mp4
+  # Expected local video when a file is added: assets/videos/renal-analysis.mp4
   role: Co-author. The work was done with RWTH Uniklinik.
   paragraphs:
     - >-
@@ -548,9 +519,6 @@
     - label: PubMed
       status: ok
       url: https://pubmed.ncbi.nlm.nih.gov/38585207/
-    - label: Code
-      status: todo
-      note: no public repository is known
   card_image:
     src: /assets/images/opt/renal-overlay.jpg
     width: 622
@@ -595,8 +563,7 @@
   location: Aachen, Germany
   project_type: Reinforcement learning, job-shop scheduling with transportation
   publication: digital-twin
-  local_video: ""
-  video_path: assets/videos/digital-twin.mp4
+  # Expected local video when a file is added: assets/videos/digital-twin.mp4
   role: >-
     Master's thesis. Co-author of the LION 2023 paper; the paper’s author
     list begins with A. Gannouni.
@@ -627,9 +594,6 @@
     - label: Paper
       status: ok
       url: https://doi.org/10.1007/978-3-031-44505-7_25
-    - label: Code
-      status: todo
-      note: no public repository is known
   card_image:
     src: /assets/images/opt/thesis-layout.jpg
     width: 889
@@ -673,8 +637,7 @@
   date_display: March 2022
   location: Saarbrücken, Germany
   project_type: Computer vision, point-cloud segmentation
-  local_video: ""
-  video_path: assets/videos/vertical-farms.mp4
+  # Expected local video when a file is added: assets/videos/vertical-farms.mp4
   role: Internship project as AI Researcher Intern at Hexafarms GmbH.
   paragraphs:
     - >-
@@ -685,12 +648,6 @@
       Yield-prediction models from the same internship are listed on the
       experience page rather than here.
   links:
-    - label: Paper
-      status: todo
-      note: industry project; no paper is known
-    - label: Code
-      status: todo
-      note: no public repository is known
     - label: Hexafarms
       status: ok
       url: https://www.hexafarms.com
@@ -738,8 +695,7 @@
   date_display: January 2018
   location: Tegucigalpa, Honduras
   project_type: Wireless sensor networks
-  local_video: ""
-  video_path: assets/videos/wildfire-detection.mp4
+  # Expected local video when a file is added: assets/videos/wildfire-detection.mp4
   role: Bachelor's thesis.
   paragraphs:
     - >-
@@ -750,13 +706,7 @@
       application for live monitoring and alerts. The emphasis was embedded
       systems, wireless sensor networks, network management, and system
       testing and deployment.
-  links:
-    - label: Paper
-      status: todo
-      note: thesis PDF link is not on the previous site
-    - label: Code
-      status: todo
-      note: no public repository is known
+  links: []
   card_image:
     src: /assets/images/opt/wildfire-node-forest.jpg
     width: 348
@@ -800,8 +750,7 @@
   date_display: April 2023
   location: Tegucigalpa, Honduras
   project_type: Industrial automation, industrial networks
-  local_video: ""
-  video_path: assets/videos/industrial-automation.mp4
+  # Expected local video when a file is added: assets/videos/industrial-automation.mp4
   role: >-
     University lecturer and laboratory instructor for the PLC course and the
     Industrial Networks course.
@@ -811,11 +760,7 @@
       design using LabVIEW. This is the lab work behind the courses taught at
       UNITEC from April to June 2023. The labs used Siemens and Schneider
       hardware and walked students through programming and commissioning.
-  links:
-    - label: Paper
-      status: na
-    - label: Code
-      status: na
+  links: []
   card_image:
     src: /assets/images/opt/plc-station.jpg
     width: 738
@@ -843,19 +788,13 @@
   date_display: March 2016
   location: Tegucigalpa, Honduras
   project_type: Computer-assisted manufacturing
-  local_video: ""
-  video_path: assets/videos/cam-robotic-arm.mp4
+  # Expected local video when a file is added: assets/videos/cam-robotic-arm.mp4
   role: Course project.
   paragraphs:
     - >-
       Computer-assisted manufacturing project using CNC machines and 3D
       printers, including a 3D-printed robotic arm.
-  links:
-    - label: Paper
-      status: na
-    - label: Code
-      status: todo
-      note: no repository was published with the project
+  links: []
   card_image:
     src: /assets/images/opt/cam-arm-1.jpg
     width: 799
@@ -880,16 +819,11 @@
   date_display: November 2015
   location: Tegucigalpa, Honduras
   project_type: CAD, SolidWorks
-  local_video: ""
-  video_path: assets/videos/cad-solidworks.mp4
+  # Expected local video when a file is added: assets/videos/cad-solidworks.mp4
   role: Course project.
   paragraphs:
     - Computer-assisted design project using SolidWorks.
-  links:
-    - label: Paper
-      status: na
-    - label: Code
-      status: na
+  links: []
   card_image:
     src: /assets/images/opt/cad-r2d2-render.jpg
     width: 794

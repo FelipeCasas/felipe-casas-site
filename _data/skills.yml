@@ -2,10 +2,10 @@ languages:
   - name: Spanish
     level: Mother tongue
   - name: English
-    level: Fluent (bilingual on the previous site)
+    level: Fluent
   - name: German
-    level: Basic proficiency on the CV
-    note: The previous site lists German at B1. The CV says basic proficiency.
+    # The previous site lists German at B1. The CV says basic proficiency.
+    level: Basic proficiency
 
 groups:
   - title: Robotic manipulation, modeling, and control
@@ -18,14 +18,19 @@ groups:
   - title: Machine learning
     items:
       - Generative models
+      - Distillation
       - 3D reconstruction, photogrammetry, and image processing
       - Deep learning and controls-oriented modeling
   - title: Frameworks and tools
     items:
       - PyTorch, JAX, and TensorFlow/Keras
-      - Isaac Sim and Isaac Lab
-      - ROS and ROS 2
+      - Isaac Sim 6.2
+      - Isaac Lab 3.0
+      - Newton 1.6.1
       - MuJoCo, Gazebo, and Unity ML-Agents
+      - ROS and ROS 2
+      - Docker
+      - Agentic programming
       - MATLAB, Simulink, and Git
   - title: Hardware, software, and automation
     items:

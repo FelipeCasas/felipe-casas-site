@@ -5,7 +5,7 @@ layout: default
 {% assign projects = site.data.projects %}
 <article class="wrap stack">
   {% unless project %}
-    <p class="todo-block"><span class="todo-flag">TODO</span> No entry in <code>_data/projects.yml</code> for slug “{{ page.slug }}”.</p>
+    <p>This project is not listed.</p>
   {% else %}
     {% assign pub = nil %}
     {% if project.publication %}
@@ -23,14 +23,22 @@ layout: default
       </ul>
     </header>
 
-    <h2>Links</h2>
     {% assign show_video = false %}
     {% if project.videos and project.videos.size > 0 %}
       {% assign show_video = true %}
     {% elsif project.local_video and project.local_video != "" %}
       {% assign show_video = true %}
     {% endif %}
-    {% include resources.html items=project.links show_video=show_video %}
+    {% assign link_count = 0 %}
+    {% for item in project.links %}
+      {% if item.status == "ok" and item.url %}
+        {% assign link_count = link_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if link_count > 0 or show_video %}
+      <h2>Links</h2>
+      {% include resources.html items=project.links show_video=show_video %}
+    {% endif %}
 
     {% if pub %}
       <p>Publication record: <a href="{{ '/publications/' | relative_url }}#{{ pub.id }}">{{ pub.title }}</a></p>
@@ -60,59 +68,50 @@ layout: default
       {% endif %}
     </div>
 
-    <h2>My role</h2>
-    <div class="prose">
-      {% if project.role_todo %}
-        <p class="todo-block"><span class="todo-flag">TODO</span> {{ project.role_todo }}</p>
-      {% endif %}
-      {% if project.role %}
+    {% if project.role %}
+      <h2>My role</h2>
+      <div class="prose">
         <p>{{ project.role }}</p>
-      {% endif %}
-    </div>
-
-    {% if project.images or project.images_todo %}
-      <h2>Figures</h2>
-      {% if project.images_todo %}
-        <p class="todo-block"><span class="todo-flag">TODO</span> {{ project.images_todo }}</p>
-      {% endif %}
-      {% if project.images %}
-        <ul class="gallery">
-          {% for image in project.images %}
-            <li{% if image.wide %} class="wide"{% endif %}>
-              <figure>
-                <img src="{{ image.src | relative_url }}" width="{{ image.width }}" height="{{ image.height }}" alt="" loading="lazy" decoding="async">
-                <figcaption>{{ image.alt }}</figcaption>
-              </figure>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
+      </div>
     {% endif %}
 
-    <h2 id="local-video">Video</h2>
-    <div class="local-video">
-      {% if project.videos and project.videos.size > 0 %}
-        <div class="clip-list">
-          {% for clip in project.videos %}
-            <figure class="clip">
-              <video muted loop playsinline preload="none" controls loading="lazy" data-lazy poster="{{ clip.poster | relative_url }}" width="{{ clip.width }}" height="{{ clip.height }}">
-                <source src="{{ clip.src | relative_url }}" type="video/mp4">
-              </video>
-              <figcaption>{{ clip.caption }} <a href="{{ clip.url }}">Post on X</a></figcaption>
+    {% if project.images %}
+      <h2>Figures</h2>
+      <ul class="gallery">
+        {% for image in project.images %}
+          <li{% if image.wide %} class="wide"{% endif %}>
+            <figure>
+              <img src="{{ image.src | relative_url }}" width="{{ image.width }}" height="{{ image.height }}" alt="" loading="lazy" decoding="async">
+              <figcaption>{{ image.alt }}</figcaption>
             </figure>
-          {% endfor %}
-        </div>
-      {% elsif project.local_video and project.local_video != "" %}
-        <video controls preload="metadata" src="{{ project.local_video | relative_url }}"></video>
-      {% else %}
-        <p class="todo-block"><span class="todo-flag">TODO</span> Video: coming soon. Add a file at <code>{{ project.video_path }}</code> and set <code>local_video</code> for <code>{{ project.slug }}</code> in <code>_data/projects.yml</code>.</p>
-      {% endif %}
-    </div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if show_video %}
+      <h2 id="local-video">Video</h2>
+      <div class="local-video">
+        {% if project.videos and project.videos.size > 0 %}
+          <div class="clip-list">
+            {% for clip in project.videos %}
+              <figure class="clip">
+                <video muted loop playsinline preload="none" controls loading="lazy" data-lazy poster="{{ clip.poster | relative_url }}" width="{{ clip.width }}" height="{{ clip.height }}">
+                  <source src="{{ clip.src | relative_url }}" type="video/mp4">
+                </video>
+                <figcaption>{{ clip.caption }} <a href="{{ clip.url }}">Post on X</a></figcaption>
+              </figure>
+            {% endfor %}
+          </div>
+        {% elsif project.local_video and project.local_video != "" %}
+          <video controls preload="metadata" src="{{ project.local_video | relative_url }}"></video>
+        {% endif %}
+      </div>
+    {% endif %}
 
     {% if project.x_posts %}
       <h2>Posts on X</h2>
       <div class="x-list">
-        <p class="source-note">Clips saved on this site are in the video section above, each linked to its post. Remaining posts are linked here, and a post that still has no local file is embedded from X.</p>
         {% assign embed_count = 0 %}
         {% for post in project.x_posts %}
           {% if post.embed %}

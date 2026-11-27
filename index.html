@@ -3,7 +3,8 @@ layout: default
 title: Home
 description: >-
   Luis Felipe Casas Murillo, PhD candidate in Computer Science at UT Dallas
-  (IRVL). Dexterous manipulation, cross-embodiment learning, and robotic grasping.
+  (IRVL), advised by Prof. Yu Xiang. Dexterous manipulation, cross-embodiment
+  learning, and robotic grasping.
 ---
 <div class="wrap">
   <section class="hero">
@@ -11,7 +12,7 @@ description: >-
       <p class="eyebrow">Intelligent Robots and Vision Lab · UT Dallas</p>
       <h1>{{ site.data.profile.name }}</h1>
       <p class="role">PhD candidate, Computer Science, UT Dallas<br>Intelligent Robots and Vision Lab</p>
-      <p>Advisor: <a href="{{ site.data.profile.advisor_url }}">{{ site.data.profile.advisor_name }}</a>. Lab: <a href="{{ site.data.profile.lab_url }}">{{ site.data.profile.lab_name }}</a>.</p>
+      <p>PhD advisor: <a href="{{ site.data.profile.advisor_url }}">{{ site.data.profile.advisor_name }}</a> ({{ site.data.profile.advisor_affiliation }}).</p>
       <ul class="chips">
         {% for interest in site.data.profile.interests %}
           <li>{{ interest }}</li>
@@ -29,7 +30,6 @@ description: >-
     <aside class="hero-aside">
       <figure class="portrait">
         <img src="{{ site.data.profile.portrait.src | relative_url }}" width="{{ site.data.profile.portrait.width }}" height="{{ site.data.profile.portrait.height }}" alt="{{ site.data.profile.portrait.alt }}">
-        <figcaption class="todo-block"><span class="todo-flag">TODO</span> Confirm this portrait or replace <code>assets/images/portrait-candidate.jpg</code>.</figcaption>
       </figure>
     </aside>
   </section>

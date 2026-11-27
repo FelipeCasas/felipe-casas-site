@@ -2,12 +2,13 @@
 layout: default
 title: About
 permalink: /about/
-description: Background, education, languages, skills, and honors for Luis Felipe Casas Murillo.
+description: Background, education, languages, skills, and honors for Luis Felipe Casas Murillo, PhD candidate at UT Dallas advised by Prof. Yu Xiang.
 ---
 <div class="wrap">
   <header class="page-header">
     <h1>About</h1>
     <p class="lede">{{ site.data.profile.role }}</p>
+    <p>PhD advisor: <a href="{{ site.data.profile.advisor_url }}">{{ site.data.profile.advisor_name }}</a> ({{ site.data.profile.advisor_affiliation }}).</p>
   </header>
 
   <div class="prose">
@@ -39,9 +40,7 @@ description: Background, education, languages, skills, and honors for Luis Felip
           {% endif %}
           <h3>{{ item.degree }}</h3>
           <p><a href="{{ item.school_url }}">{{ item.school }}</a>{% if item.location %} · {{ item.location }}{% endif %}{% if item.gpa %} · GPA {{ item.gpa }}{% endif %}</p>
-          {% if item.dates_todo %}
-            <p class="todo-block"><span class="todo-flag">TODO</span> {{ item.dates_todo }}</p>
-          {% else %}
+          {% if item.dates %}
             <p>{{ item.dates }}</p>
           {% endif %}
           <ul class="clean">
@@ -51,7 +50,7 @@ description: Background, education, languages, skills, and honors for Luis Felip
           </ul>
           {% if item.program %}
             <details>
-              <summary>Program notes from the previous site</summary>
+              <summary>Program notes</summary>
               <ul class="clean">
                 {% for line in item.program %}
                   <li>{{ line }}</li>
@@ -103,13 +102,15 @@ description: Background, education, languages, skills, and honors for Luis Felip
       {% endfor %}
     </ul>
     <details>
-      <summary>Full list from the CV and the previous site</summary>
+      <summary>Full list</summary>
       <ul class="clean">
         {% for item in site.data.honors.full %}
           <li>{{ item.date }} — {{ item.text }}{% if item.url %} <a href="{{ item.url }}">Post</a>{% endif %}</li>
         {% endfor %}
       </ul>
     </details>
-    <p class="source-note">Phi Kappa Phi and a renewed IEEE-RAS membership appear only in a commented block of the CV, so they are not listed.</p>
+    {% comment %}
+      Phi Kappa Phi and a later IEEE-RAS membership appear only in a commented block of the CV and are not listed.
+    {% endcomment %}
   </section>
 </div>

@@ -6,8 +6,9 @@ x: https://x.com/lfcasas7
 github: https://github.com/FelipeCasas
 lab_url: https://labs.utdallas.edu/irvl/
 lab_name: Intelligent Robots and Vision Lab (IRVL)
-advisor_name: Yu Xiang
+advisor_name: Prof. Yu Xiang
 advisor_url: https://yuxng.github.io
+advisor_affiliation: IRVL, UT Dallas
 university_url: https://www.utdallas.edu/
 
 linkedin:
@@ -19,14 +20,11 @@ scholar: "https://scholar.google.com/citations?user=dieB8mMAAAAJ&hl=en&oi=sra"
 
 cv_pdf: /assets/cv/Luis-Felipe-Casas-CV.pdf
 
-# Unconfirmed headshot from the previous site's CV page.
-# The round image on the old home page is a GitHub icon, not a photo.
 portrait:
   src: /assets/images/portrait-candidate.jpg
   width: 600
   height: 600
-  alt: Headshot of Luis Felipe Casas Murillo from the previous site's CV page.
-  confirmed: false
+  alt: Headshot of Luis Felipe Casas Murillo.
 
 nav:
   - label: Home
@@ -58,7 +56,8 @@ bio:
   - >-
     Hello, I am Felipe, a Ph.D. student in Computer Science at The University
     of Texas at Dallas. I work on intelligent robotics at the Intelligent
-    Robots and Vision Lab (IRVL). I have a master's degree in Robotic Systems
+    Robots and Vision Lab (IRVL), advised by Prof. Yu Xiang. I have a master's
+    degree in Robotic Systems
     Engineering from RWTH Aachen University and a bachelor's degree in
     Mechatronics Engineering from the Central American Technological University
     (UNITEC). I received best-of-class acknowledgments from both my
@@ -80,14 +79,15 @@ bio:
     Unified Hand Action Space” (UHAS), accepted and presented at the RSS 2026
     Dexterous Manipulation Workshop. I received the Louis Beecherl, Jr.
     Graduate Fellowship for 2025–2026. I was a Reinforcement Learning Engineer
-    intern at Persona AI in summer 2026. UHAS was discussed on RoboPapers,
+    intern at Persona AI from May to August 2026. UHAS was discussed on RoboPapers,
     episode 97.
 
 research:
   - >-
     I am part of the Intelligent Robots and Vision Lab at The University of
-    Texas at Dallas, where my research focuses on robotic manipulation,
-    particularly on developing solutions for robots to autonomously perform
+    Texas at Dallas, advised by Prof. Yu Xiang. My research focuses on
+    robotic manipulation, particularly on developing solutions for robots to
+    autonomously perform
     tasks in real-world settings to assist humans. I hold the view that
     achieving high skill levels in engineering demands hard work, and that
     one's abilities are best demonstrated by overcoming challenges in projects.

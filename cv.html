@@ -2,12 +2,13 @@
 layout: default
 title: CV
 permalink: /cv/
-description: Curriculum vitae, with a PDF download and the same facts on the HTML pages.
+description: Curriculum vitae for Luis Felipe Casas Murillo, PhD candidate at UT Dallas advised by Prof. Yu Xiang.
 ---
 <div class="wrap">
   <header class="page-header">
     <h1>CV</h1>
     <p class="lede">A single PDF, plus the same facts split across About, Experience, Publications, and News.</p>
+    <p>PhD advisor: <a href="{{ site.data.profile.advisor_url }}">{{ site.data.profile.advisor_name }}</a> ({{ site.data.profile.advisor_affiliation }}).</p>
   </header>
 
   {% if site.data.profile.cv_pdf != "" %}
@@ -15,8 +16,6 @@ description: Curriculum vitae, with a PDF download and the same facts on the HTM
     <object data="{{ site.data.profile.cv_pdf | relative_url }}" type="application/pdf" width="100%" height="820" aria-label="Curriculum vitae PDF">
       <p>The PDF viewer is unavailable. Use the download link.</p>
     </object>
-  {% else %}
-    <p class="todo-block"><span class="todo-flag">TODO</span> CV PDF: coming soon. Export the LaTeX CV, remove the phone number, and save it as <code>{{ site.data.profile.cv_pdf_expected }}</code>. Then set <code>cv_pdf</code> in <code>_data/profile.yml</code> to that path.</p>
   {% endif %}
 
   <h2>HTML version</h2>
@@ -26,5 +25,5 @@ description: Curriculum vitae, with a PDF download and the same facts on the HTM
     <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
     <li><a href="{{ '/news/' | relative_url }}">News and talks</a></li>
   </ul>
-  <p class="source-note">The download is the compiled CV. HTML pages use <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>. The Ph.D. started in August 2023 and the M.Sc. ended in November 2022.</p>
+  <p class="source-note">The download is the compiled CV. HTML pages use <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>. The Ph.D. at UT Dallas started in August 2023, advised by Prof. Yu Xiang, and the M.Sc. ended in November 2022.</p>
 </div>

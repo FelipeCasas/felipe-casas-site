@@ -1,15 +1,11 @@
-# Professional roles, newest first. Persona AI bullets and dates are placeholders.
+# Professional roles, newest first.
 - id: persona-ai
   role: Reinforcement Learning Engineer
   kind: Summer internship
   org: Persona AI
-  dates_todo: >-
-    Add the start and end dates. A public post on August 25, 2026 thanks
-    @personaaiinc for a summer internship. The post does not give dates.
-  location_todo: Add the location if it should be public.
-  bullets_todo: >-
-    Add public bullets for the summer 2026 internship. Confirm what can be
-    shared.
+  dates: May 2026 – August 2026
+  bullets:
+    - Built robotic grasping reinforcement-learning environments using Isaac Lab develop versions (Newton), including dexterous grasping.
   links:
     - label: Note on X
       url: https://x.com/lfcasas7/status/2092338679196917789
@@ -19,6 +15,7 @@
   org_url: https://labs.utdallas.edu/irvl/
   location: Richardson, TX
   dates: Aug. 2023 – present
+  advisor: true
   bullets:
     - Research on dexterous manipulation, robotic control policies, grasping, generative models, cross-embodiment learning, and zero-shot transfer.
     - "First author of UHAS, presented at the RSS 2026 Dexterous Manipulation Workshop."
@@ -42,7 +39,7 @@
   org_url: https://www.hexafarms.com
   location: Saarbrücken, Germany
   dates: November 2021 – March 2022
-  note: The previous site lists this role as “AI Researcher,” without “Intern.” The CV title is used here.
+  # The previous site lists this role as “AI Researcher,” without “Intern.” The CV title is used here.
   bullets:
     - Built a 3D reconstruction pipeline for vertical farms from drone imagery with structure-from-motion.
     - Segmented 3D models and wrote a labeling tool for training PointNet.
@@ -53,7 +50,7 @@
   org_url: https://www.ingelmec.com
   location: Tegucigalpa, Honduras
   dates: Aug. 2018 – May 2019
-  note: The previous site ends this role in April 2019. The CV end date is used here.
+  # The previous site ends this role in April 2019. The CV end date is used here.
   bullets:
     - Monitoring and Innovation department, and the fire-suppression systems team.
     - Deployed data-center monitoring with SCADA, including on-site installation and network integration.
